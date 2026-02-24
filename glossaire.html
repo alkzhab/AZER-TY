@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZER TY — Glossaire Tech</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Inter:wght@300;400;600;800&family=Syne:wght@600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/glossaire.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <script src="JS/header.js" defer></script>
+    <script src="JS/particules.js" defer></script>
+    <script src="JS/scroll.js" defer></script>
+    <script src="JS/glossaire.js" defer></script>
+</head>
+
+<body>
+
+    <header id="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <img src="Images/logo.png" alt="AZER TY — Web Solutions">
+            </a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="about.html">Qui sommes-nous</a></li>
+                    <li><a href="technologies.html">Technologies</a></li>
+                    <li><a href="realisations.html">Réalisations</a></li>
+                    <li><a href="recrutement.html">Recrutement</a></li>
+                    <li><a href="glossaire.html" class="active">Glossaire</a></li>
+                </ul>
+            </nav>
+            <div class="nav-cta">
+                <a href="collaborons.html" class="btn-contact">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    Contactez-nous
+                </a>
+            </div>
+            <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobile-menu" role="navigation">
+            <a href="about.html">Qui sommes-nous</a>
+            <a href="technologies.html">Technologies</a>
+            <a href="realisations.html">Réalisations</a>
+            <a href="recrutement.html">Recrutement</a>
+            <a href="glossaire.html">Glossaire</a>
+            <div class="mobile-cta"><a href="collaborons.html">Contactez-nous</a></div>
+        </div>
+    </header>
+
+    <div id="particles-js"></div>
+    <div class="bg-grid"></div>
+
+    <main class="glossaire-wrapper">
+
+        <section class="gloss-hero">
+            <div class="gloss-hero-inner">
+                <div class="gloss-eyebrow">
+                    <span class="gloss-eyebrow-dot"></span>
+                    Ressource développeurs
+                </div>
+                <h1 class="gloss-title">Le glossaire <em>tech</em><br>d'AZER TY</h1>
+                <p class="gloss-subtitle">Tous les termes essentiels du développement web, mobile et logiciel — expliqués simplement, sans jargon inutile.</p>
+
+                <div class="gloss-search-wrap">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="gloss-search" placeholder="Rechercher un terme… ex: API, Docker, MVC" autocomplete="off">
+                </div>
+                <div class="gloss-search-count" id="gloss-count"></div>
+            </div>
+
+            <nav class="gloss-alpha-nav" id="alpha-nav" aria-label="Navigation alphabétique"></nav>
+        </section>
+
+        <div class="gloss-body">
+            <div id="gloss-no-result">
+                <i class="fa-regular fa-face-frown-open"></i>
+                Aucun terme ne correspond à votre recherche.
+            </div>
+
+            <div class="gloss-category" data-cat="frontend">
+                <div class="gloss-cat-header">
+                    <div class="gloss-cat-icon cyan"><i class="fa-solid fa-paintbrush"></i></div>
+                    <div>
+                        <div class="gloss-cat-title">Frontend</div>
+                    </div>
+                    <span class="gloss-cat-count">10 termes</span>
+                </div>
+                <div class="gloss-grid">
+
+                    <div class="gloss-card" data-term="DOM">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">D</div>
+                                <div class="gloss-card-term">DOM</div>
+                            </div>
+                            <span class="gloss-card-badge badge-front">Frontend</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body"><strong>Document Object Model.</strong> Représentation arborescente d'une page HTML en mémoire. JavaScript peut lire et modifier cet arbre pour changer dynamiquement le contenu ou le style sans rechargement de la page.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="SPA">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">S</div>
+                                <div class="gloss-card-term">SPA</div>
+                            </div>
+                            <span class="gloss-card-badge badge-front">Frontend</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body"><strong>Single Page Application.</strong> Application web qui charge une seule page HTML et met à jour dynamiquement le contenu via JavaScript (React, Vue.js). Offre une navigation fluide, sans rechargement complet.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="SSR">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">S</div>
+                                <div class="gloss-card-term">SSR</div>
+                            </div>
+                            <span class="gloss-card-badge badge-front">Frontend</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body"><strong>Server-Side Rendering.</strong> Le HTML est généré côté serveur avant d'être envoyé au navigateur. Améliore le SEO et le temps d'affichage initial. Utilisé avec Next.js ou Nuxt.js.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="SSG">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">S</div>
+                                <div class="gloss-card-term">SSG</div>
+                            </div>
+                            <span class="gloss-card-badge badge-front">Frontend</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body"><strong>Static Site Generation.</strong> Les pages sont générées en HTML statique lors du build, puis servies directement. Ultra-rapide et sécurisé. Idéal pour les blogs, portfolios et sites à contenu peu changeant.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Responsive Design">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">R</div>
+                                <div class="gloss-card-term">Responsive Design</div>
+                            </div>
+                            <span class="gloss-card-badge badge-front">Frontend</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Approche de conception qui permet à une interface de s'adapter automatiquement à la taille de l'écran (mobile, tablette, desktop) via des media queries CSS et des unités fluides.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Component">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">C</div>
+                                <div class="gloss-card-term">Component</div>
+                            </div>
+                            <span class="gloss-card-badge badge-front">Frontend</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Bloc UI réutilisable et autonome (React, Vue). Encapsule son propre HTML, CSS et logique. Permet de construire des interfaces complexes à partir de petites briques indépendantes.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="State / État">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">S</div>
+                                <div class="gloss-card-term">State / État</div>
+                            </div>
+                            <span class="gloss-card-badge badge-front">Frontend</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Données dynamiques qui déterminent l'affichage d'un composant à un instant T. Quand le state change, le composant se re-render automatiquement. Géré avec useState (React) ou reactive (Vue).</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Props">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">P</div>
+                                <div class="gloss-card-term">Props</div>
+                            </div>
+                            <span class="gloss-card-badge badge-front">Frontend</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Propriétés passées d'un composant parent à un composant enfant (React/Vue). Permettent de personnaliser un composant sans modifier sa logique interne. Les props sont en lecture seule.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Virtual DOM">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">V</div>
+                                <div class="gloss-card-term">Virtual DOM</div>
+                            </div>
+                            <span class="gloss-card-badge badge-front">Frontend</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Copie légère du DOM réel maintenue en mémoire par React. Lors d'un changement, React compare le Virtual DOM avec le DOM réel (diffing) et ne met à jour que les éléments modifiés, pour de meilleures performances.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Lazy Loading">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">L</div>
+                                <div class="gloss-card-term">Lazy Loading</div>
+                            </div>
+                            <span class="gloss-card-badge badge-front">Frontend</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Technique qui diffère le chargement des ressources (images, modules) jusqu'à ce qu'elles soient nécessaires. Réduit le temps de chargement initial et la consommation de bande passante.</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="gloss-category" data-cat="backend">
+                <div class="gloss-cat-header">
+                    <div class="gloss-cat-icon blue"><i class="fa-solid fa-server"></i></div>
+                    <div>
+                        <div class="gloss-cat-title">Backend</div>
+                    </div>
+                    <span class="gloss-cat-count">11 termes</span>
+                </div>
+                <div class="gloss-grid">
+
+                    <div class="gloss-card" data-term="API">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">A</div>
+                                <div class="gloss-card-term">API</div>
+                            </div>
+                            <span class="gloss-card-badge badge-back">Backend</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body"><strong>Application Programming Interface.</strong> Ensemble de règles définissant comment deux applications communiquent. Une API REST expose des endpoints HTTP que les clients (frontend, mobile) appellent pour lire ou modifier des données.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="REST">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">R</div>
+                                <div class="gloss-card-term">REST</div>
+                            </div>
+                            <span class="gloss-card-badge badge-back">Backend</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body"><strong>Representational State Transfer.</strong> Style d'architecture pour les APIs web utilisant les méthodes HTTP (GET, POST, PUT, DELETE). Les ressources sont identifiées par des URLs et les échanges se font en JSON ou XML.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="MVC">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">M</div>
+                                <div class="gloss-card-term">MVC</div>
+                            </div>
+                            <span class="gloss-card-badge badge-back">Backend</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body"><strong>Model-View-Controller.</strong> Patron de conception séparant la logique en 3 couches : le Modèle (données), la Vue (affichage), le Contrôleur (logique métier). Utilisé dans CodeIgniter, Laravel, Spring MVC.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Middleware">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">M</div>
+                                <div class="gloss-card-term">Middleware</div>
+                            </div>
+                            <span class="gloss-card-badge badge-back">Backend</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Couche logicielle intermédiaire qui intercepte les requêtes HTTP avant qu'elles atteignent le contrôleur. Utilisée pour l'authentification, la validation, la journalisation ou la gestion des CORS.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Endpoint">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">E</div>
+                                <div class="gloss-card-term">Endpoint</div>
+                            </div>
+                            <span class="gloss-card-badge badge-back">Backend</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">URL spécifique d'une API à laquelle un client envoie une requête. Chaque endpoint correspond à une ressource ou une action précise. Ex : <code style="font-family:monospace;color:var(--cyan)">GET /api/users/42</code> retourne l'utilisateur 42.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="JWT">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">J</div>
+                                <div class="gloss-card-term">JWT</div>
+                            </div>
+                            <span class="gloss-card-badge badge-back">Backend</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body"><strong>JSON Web Token.</strong> Standard d'authentification stateless. Le serveur génère un token signé contenant les infos utilisateur. Le client le renvoie dans chaque requête. Pas besoin de session côté serveur.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="WebSocket">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">W</div>
+                                <div class="gloss-card-term">WebSocket</div>
+                            </div>
+                            <span class="gloss-card-badge badge-back">Backend</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Protocole de communication bidirectionnel en temps réel entre client et serveur. Contrairement au HTTP classique, la connexion reste ouverte. Utilisé pour les chats, jeux multijoueur et dashboards live.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="ORM">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">O</div>
+                                <div class="gloss-card-term">ORM</div>
+                            </div>
+                            <span class="gloss-card-badge badge-back">Backend</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body"><strong>Object-Relational Mapping.</strong> Outil qui traduit les tables SQL en objets dans le code. Permet d'interagir avec la base de données sans écrire de SQL brut. Exemples : Eloquent (Laravel), Hibernate (Java), Prisma (Node.js).</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="CORS">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">C</div>
+                                <div class="gloss-card-term">CORS</div>
+                            </div>
+                            <span class="gloss-card-badge badge-back">Backend</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body"><strong>Cross-Origin Resource Sharing.</strong> Mécanisme de sécurité HTTP qui contrôle les requêtes d'un domaine vers un autre. Le serveur déclare les origines autorisées via des headers spécifiques.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Microservices">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">M</div>
+                                <div class="gloss-card-term">Microservices</div>
+                            </div>
+                            <span class="gloss-card-badge badge-back">Backend</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Architecture où l'application est découpée en petits services indépendants communiquant via APIs. Chaque service gère une fonction précise et peut être déployé séparément. S'oppose à l'architecture monolithique.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Monolithe">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">M</div>
+                                <div class="gloss-card-term">Monolithe</div>
+                            </div>
+                            <span class="gloss-card-badge badge-back">Backend</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Application dont toutes les fonctionnalités sont regroupées dans un seul codebase déployé ensemble. Simple à développer au départ, mais devient difficile à scaler et maintenir quand il grossit.</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="gloss-category" data-cat="bdd">
+                <div class="gloss-cat-header">
+                    <div class="gloss-cat-icon green"><i class="fa-solid fa-database"></i></div>
+                    <div>
+                        <div class="gloss-cat-title">Base de données</div>
+                    </div>
+                    <span class="gloss-cat-count">9 termes</span>
+                </div>
+                <div class="gloss-grid">
+
+                    <div class="gloss-card" data-term="SQL">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">S</div>
+                                <div class="gloss-card-term">SQL</div>
+                            </div>
+                            <span class="gloss-card-badge badge-db">Base de données</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body"><strong>Structured Query Language.</strong> Langage standard pour interroger et manipuler des bases de données relationnelles. Principales commandes : SELECT, INSERT, UPDATE, DELETE, JOIN. Utilisé avec MySQL, PostgreSQL, SQLite.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="NoSQL">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">N</div>
+                                <div class="gloss-card-term">NoSQL</div>
+                            </div>
+                            <span class="gloss-card-badge badge-db">Base de données</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Catégorie de bases de données non relationnelles qui stockent les données sans schéma fixe. Adapté aux données non-structurées, au scaling horizontal et aux forts volumes. Exemples : MongoDB (documents), Redis (clé-valeur).</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Index">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">I</div>
+                                <div class="gloss-card-term">Index</div>
+                            </div>
+                            <span class="gloss-card-badge badge-db">Base de données</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Structure de données accélérant les requêtes sur une colonne ou un ensemble de colonnes. Comme l'index d'un livre, il évite de parcourir toute la table pour trouver des enregistrements. Contrepartie : espace disque supplémentaire.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Clé primaire / Foreign Key">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">C</div>
+                                <div class="gloss-card-term">Clé primaire / Foreign Key</div>
+                            </div>
+                            <span class="gloss-card-badge badge-db">Base de données</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body"><strong>Clé primaire :</strong> identifiant unique d'un enregistrement dans une table. <strong>Clé étrangère :</strong> colonne qui référence la clé primaire d'une autre table, établissant une relation entre les deux.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Transaction">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">T</div>
+                                <div class="gloss-card-term">Transaction</div>
+                            </div>
+                            <span class="gloss-card-badge badge-db">Base de données</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Ensemble d'opérations SQL exécutées comme une unité atomique. Soit tout réussit (COMMIT), soit tout est annulé (ROLLBACK). Garantit la cohérence des données. Propriétés ACID : Atomicité, Cohérence, Isolation, Durabilité.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Migration">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">M</div>
+                                <div class="gloss-card-term">Migration</div>
+                            </div>
+                            <span class="gloss-card-badge badge-db">Base de données</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Script versionné décrivant une modification de la structure de la base (ajout de table, colonne, index). Permet de faire évoluer le schéma de manière contrôlée et reproductible sur tous les environnements.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Jointure (JOIN)">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">J</div>
+                                <div class="gloss-card-term">Jointure (JOIN)</div>
+                            </div>
+                            <span class="gloss-card-badge badge-db">Base de données</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Opération SQL combinant des lignes de deux tables selon une condition. Types principaux : INNER JOIN (lignes communes), LEFT JOIN (toutes les lignes de gauche + correspondances), OUTER JOIN (toutes les lignes des deux tables).</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Cache">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">C</div>
+                                <div class="gloss-card-term">Cache</div>
+                            </div>
+                            <span class="gloss-card-badge badge-db">Base de données</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Stockage temporaire de données fréquemment accédées pour accélérer les lectures. Peut être en mémoire (Redis), côté serveur ou navigateur. Réduit la charge sur la base de données principale.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Sharding">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">S</div>
+                                <div class="gloss-card-term">Sharding</div>
+                            </div>
+                            <span class="gloss-card-badge badge-db">Base de données</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Technique de partitionnement horizontal d'une base de données sur plusieurs serveurs. Chaque shard contient une partie des données. Permet de scaler horizontalement et de gérer des volumes massifs.</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="gloss-category" data-cat="devops">
+                <div class="gloss-cat-header">
+                    <div class="gloss-cat-icon gold"><i class="fa-solid fa-gears"></i></div>
+                    <div>
+                        <div class="gloss-cat-title">DevOps & Infrastructure</div>
+                    </div>
+                    <span class="gloss-cat-count">10 termes</span>
+                </div>
+                <div class="gloss-grid">
+
+                    <div class="gloss-card" data-term="CI/CD">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">C</div>
+                                <div class="gloss-card-term">CI/CD</div>
+                            </div>
+                            <span class="gloss-card-badge badge-devops">DevOps</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body"><strong>Continuous Integration / Continuous Delivery.</strong> CI : automatisation des tests à chaque push. CD : déploiement automatique en production après validation. Réduit les risques et la friction des mises en production.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Container">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">C</div>
+                                <div class="gloss-card-term">Container</div>
+                            </div>
+                            <span class="gloss-card-badge badge-devops">DevOps</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Environnement léger et isolé contenant une application et toutes ses dépendances. Plus léger qu'une VM car il partage le noyau de l'OS hôte. Docker est l'outil de containerisation le plus populaire.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Image Docker">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">I</div>
+                                <div class="gloss-card-term">Image Docker</div>
+                            </div>
+                            <span class="gloss-card-badge badge-devops">DevOps</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Modèle immuable décrivant un environnement d'exécution. Définie dans un Dockerfile, elle permet de créer des conteneurs identiques sur n'importe quel hôte. Partageable via Docker Hub ou registres privés.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Git Flow">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">G</div>
+                                <div class="gloss-card-term">Git Flow</div>
+                            </div>
+                            <span class="gloss-card-badge badge-devops">DevOps</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Convention de gestion de branches Git : main (prod), develop, feature/*, hotfix/*, release/*. Structure le travail en équipe et évite les conflits. Chaque fonctionnalité vit dans sa propre branche jusqu'à la fusion.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Pull Request / Merge Request">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">P</div>
+                                <div class="gloss-card-term">Pull Request</div>
+                            </div>
+                            <span class="gloss-card-badge badge-devops">DevOps</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Demande de fusion d'une branche vers une autre sur GitHub/GitLab. Permet la revue de code par un pair avant intégration. Inclut discussion, commentaires, et validation des tests automatiques.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Déploiement">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">D</div>
+                                <div class="gloss-card-term">Déploiement</div>
+                            </div>
+                            <span class="gloss-card-badge badge-devops">DevOps</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Processus de mise en ligne d'une nouvelle version d'une application. Peut être manuel ou automatisé via CI/CD. Stratégies : Blue-Green (deux environnements en parallèle), Canary (déploiement progressif), Rolling update.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Environnement">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">E</div>
+                                <div class="gloss-card-term">Environnement</div>
+                            </div>
+                            <span class="gloss-card-badge badge-devops">DevOps</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Contexte d'exécution d'une application. Les trois principaux : <strong>dev</strong> (local, tests rapides), <strong>staging</strong> (pré-prod, miroir de la production), <strong>production</strong> (réel, utilisateurs finaux).</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Build">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">B</div>
+                                <div class="gloss-card-term">Build</div>
+                            </div>
+                            <span class="gloss-card-badge badge-devops">DevOps</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Processus de compilation et d'optimisation du code source pour la production. Inclut : transpilation TypeScript → JS, minification, bundling, tree-shaking. Outils : Webpack, Vite, Maven (Java).</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Logs">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">L</div>
+                                <div class="gloss-card-term">Logs</div>
+                            </div>
+                            <span class="gloss-card-badge badge-devops">DevOps</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Enregistrements horodatés des événements d'une application (requêtes, erreurs, actions). Indispensables pour le debugging et la surveillance. Niveaux : DEBUG, INFO, WARN, ERROR, FATAL.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Scalabilité">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">S</div>
+                                <div class="gloss-card-term">Scalabilité</div>
+                            </div>
+                            <span class="gloss-card-badge badge-devops">DevOps</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Capacité d'un système à gérer une charge croissante. <strong>Verticale :</strong> augmenter les ressources d'un serveur. <strong>Horizontale :</strong> ajouter des serveurs en parallèle. Les microservices et conteneurs favorisent le scaling horizontal.</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="gloss-category" data-cat="archi">
+                <div class="gloss-cat-header">
+                    <div class="gloss-cat-icon cyan"><i class="fa-solid fa-sitemap"></i></div>
+                    <div>
+                        <div class="gloss-cat-title">Architecture & Conception</div>
+                    </div>
+                    <span class="gloss-cat-count">8 termes</span>
+                </div>
+                <div class="gloss-grid">
+
+                    <div class="gloss-card" data-term="Design Pattern">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">D</div>
+                                <div class="gloss-card-term">Design Pattern</div>
+                            </div>
+                            <span class="gloss-card-badge badge-archi">Architecture</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Solution réutilisable à un problème récurrent de conception logicielle. Les 3 familles : Créationnels (Singleton, Factory), Structurels (Adapter, Decorator), Comportementaux (Observer, Strategy). Pas du code, mais des recettes.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Singleton">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">S</div>
+                                <div class="gloss-card-term">Singleton</div>
+                            </div>
+                            <span class="gloss-card-badge badge-archi">Architecture</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Design pattern garantissant qu'une classe n'a qu'une seule instance dans tout le programme. Utilisé pour des ressources partagées : connexion BDD, configuration globale, logger.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="SOLID">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">S</div>
+                                <div class="gloss-card-term">SOLID</div>
+                            </div>
+                            <span class="gloss-card-badge badge-archi">Architecture</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">5 principes de conception OOP : <strong>S</strong>ingle Responsibility, <strong>O</strong>pen/Closed, <strong>L</strong>iskov Substitution, <strong>I</strong>nterface Segregation, <strong>D</strong>ependency Inversion. Rendent le code maintenable et extensible.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="DRY">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">D</div>
+                                <div class="gloss-card-term">DRY</div>
+                            </div>
+                            <span class="gloss-card-badge badge-archi">Architecture</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body"><strong>Don't Repeat Yourself.</strong> Principe évitant la duplication de logique dans le code. Chaque connaissance doit avoir une représentation unique dans le système. Facilite la maintenance et réduit les bugs.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Héritage / Polymorphisme">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">H</div>
+                                <div class="gloss-card-term">Héritage / Polymorphisme</div>
+                            </div>
+                            <span class="gloss-card-badge badge-archi">Architecture</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body"><strong>Héritage :</strong> une classe enfant hérite des attributs et méthodes d'une classe parent. <strong>Polymorphisme :</strong> une méthode peut avoir des comportements différents selon la classe qui l'implémente.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Interface">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">I</div>
+                                <div class="gloss-card-term">Interface</div>
+                            </div>
+                            <span class="gloss-card-badge badge-archi">Architecture</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Contrat définissant les méthodes qu'une classe doit implémenter, sans en définir le comportement. Favorise le découplage et l'interchangeabilité des implémentations. Fondamental en Java, TypeScript, PHP.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Abstraction">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">A</div>
+                                <div class="gloss-card-term">Abstraction</div>
+                            </div>
+                            <span class="gloss-card-badge badge-archi">Architecture</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Principe OOP exposant uniquement ce qui est nécessaire et cachant la complexité interne. Permet de changer l'implémentation sans affecter le code qui l'utilise. Pilier de la maintenance à long terme.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Refactoring">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">R</div>
+                                <div class="gloss-card-term">Refactoring</div>
+                            </div>
+                            <span class="gloss-card-badge badge-archi">Architecture</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Processus d'amélioration de la structure interne du code sans changer son comportement externe. Réduit la dette technique, améliore la lisibilité et la maintenabilité. Doit s'accompagner de tests.</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="gloss-category" data-cat="secu">
+                <div class="gloss-cat-header">
+                    <div class="gloss-cat-icon gold"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div>
+                        <div class="gloss-cat-title">Sécurité</div>
+                    </div>
+                    <span class="gloss-cat-count">6 termes</span>
+                </div>
+                <div class="gloss-grid">
+
+                    <div class="gloss-card" data-term="Injection SQL">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">I</div>
+                                <div class="gloss-card-term">Injection SQL</div>
+                            </div>
+                            <span class="gloss-card-badge badge-secu">Sécurité</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Attaque exploitant une mauvaise validation des entrées pour injecter des commandes SQL malveillantes. Prévention : utiliser des requêtes préparées (prepared statements) et ne jamais concaténer du texte utilisateur dans une requête SQL.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="XSS">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">X</div>
+                                <div class="gloss-card-term">XSS</div>
+                            </div>
+                            <span class="gloss-card-badge badge-secu">Sécurité</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body"><strong>Cross-Site Scripting.</strong> Injection de scripts malveillants dans une page web consultée par d'autres utilisateurs. Prévention : échapper toutes les données affichées, utiliser Content Security Policy (CSP).</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="HTTPS / SSL / TLS">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">H</div>
+                                <div class="gloss-card-term">HTTPS / SSL / TLS</div>
+                            </div>
+                            <span class="gloss-card-badge badge-secu">Sécurité</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">HTTPS = HTTP chiffré via TLS (anciennement SSL). Protège les données en transit entre le navigateur et le serveur. Indispensable pour tout site (SEO, confiance, RGPD). Certificats obtenables via Let's Encrypt (gratuit).</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Hachage / Hashage">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">H</div>
+                                <div class="gloss-card-term">Hachage</div>
+                            </div>
+                            <span class="gloss-card-badge badge-secu">Sécurité</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Transformation irréversible d'une donnée en empreinte de taille fixe. Utilisé pour stocker les mots de passe (bcrypt, Argon2). Différent du chiffrement (réversible). Ne jamais stocker des mots de passe en clair.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="CSRF">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">C</div>
+                                <div class="gloss-card-term">CSRF</div>
+                            </div>
+                            <span class="gloss-card-badge badge-secu">Sécurité</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body"><strong>Cross-Site Request Forgery.</strong> Attaque forçant un utilisateur authentifié à effectuer une action non désirée. Prévention : token CSRF unique par formulaire, vérification de l'en-tête Origin/Referer.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="RGPD">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">R</div>
+                                <div class="gloss-card-term">RGPD</div>
+                            </div>
+                            <span class="gloss-card-badge badge-secu">Sécurité</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body"><strong>Règlement Général sur la Protection des Données.</strong> Législation européenne encadrant la collecte et le traitement des données personnelles. Obligations : consentement, droit à l'oubli, portabilité, notification des violations.</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="gloss-category" data-cat="methode">
+                <div class="gloss-cat-header">
+                    <div class="gloss-cat-icon green"><i class="fa-solid fa-list-check"></i></div>
+                    <div>
+                        <div class="gloss-cat-title">Méthodes & Tests</div>
+                    </div>
+                    <span class="gloss-cat-count">7 termes</span>
+                </div>
+                <div class="gloss-grid">
+
+                    <div class="gloss-card" data-term="Agile / Scrum">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">A</div>
+                                <div class="gloss-card-term">Agile / Scrum</div>
+                            </div>
+                            <span class="gloss-card-badge badge-perf">Méthodes</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Méthode de gestion de projet en cycles courts (sprints de 1-4 semaines). Scrum = cadre Agile avec rôles définis (Product Owner, Scrum Master, équipe) et cérémonies (daily standup, sprint review, rétrospective).</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Tests unitaires">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">T</div>
+                                <div class="gloss-card-term">Tests unitaires</div>
+                            </div>
+                            <span class="gloss-card-badge badge-perf">Méthodes</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Tests vérifiant le comportement d'une fonction ou d'une classe de manière isolée. Chaque test couvre un seul cas précis. Outils : JUnit (Java), Jest (JS/TS), PHPUnit. Constituent le filet de sécurité du refactoring.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="TDD">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">T</div>
+                                <div class="gloss-card-term">TDD</div>
+                            </div>
+                            <span class="gloss-card-badge badge-perf">Méthodes</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body"><strong>Test-Driven Development.</strong> Approche où on écrit le test avant le code. Cycle : <strong>Red</strong> (test échoue) → <strong>Green</strong> (code minimal pour passer) → <strong>Refactor</strong> (améliorer). Produit un code plus fiable et bien conçu.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Code Review">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">C</div>
+                                <div class="gloss-card-term">Code Review</div>
+                            </div>
+                            <span class="gloss-card-badge badge-perf">Méthodes</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Examen du code par un ou plusieurs pairs avant intégration. Objectifs : détecter les bugs, garantir les standards, partager la connaissance. Pratique clé pour la qualité et la cohérence d'une équipe.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Dette technique">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">D</div>
+                                <div class="gloss-card-term">Dette technique</div>
+                            </div>
+                            <span class="gloss-card-badge badge-perf">Méthodes</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Coût implicite du code mal conçu ou des raccourcis pris pour livrer vite. Comme une dette financière, elle génère des intérêts (bugs, lenteur). Se rembourse par le refactoring et les tests.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Documentation">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">D</div>
+                                <div class="gloss-card-term">Documentation</div>
+                            </div>
+                            <span class="gloss-card-badge badge-perf">Méthodes</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body">Ensemble des textes décrivant le fonctionnement d'un logiciel : README, commentaires inline, wikis, guides API (Swagger/OpenAPI). Une bonne doc réduit le temps d'onboarding et les erreurs d'utilisation.</div>
+                    </div>
+
+                    <div class="gloss-card" data-term="Versionning">
+                        <div class="gloss-card-header">
+                            <div>
+                                <div class="gloss-letter-anchor">V</div>
+                                <div class="gloss-card-term">Versionning / SemVer</div>
+                            </div>
+                            <span class="gloss-card-badge badge-perf">Méthodes</span>
+                            <div class="gloss-card-toggle"><i class="fa-solid fa-plus"></i></div>
+                        </div>
+                        <div class="gloss-card-body"><strong>Semantic Versioning :</strong> convention de numérotation MAJOR.MINOR.PATCH. MAJOR = changement incompatible, MINOR = nouvelle fonctionnalité rétrocompatible, PATCH = correction de bug. Ex : 2.1.4.</div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-decor">
+            <span class="footer-huge-logo font-mono">&lt;A/&gt;</span>
+        </div>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo font-mono">&lt;AZER TY/&gt;</div>
+                    <div class="footer-contact">
+                        <p class="font-mono">+33 1 02 03 04 05</p>
+                        <p class="font-mono">contact@azerty-solutions.fr</p>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#"><i class="fa-solid fa-earth-europe"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-addresses">
+                    <h3 class="footer-heading">Nos Adresses</h3>
+                    <div class="footer-address-block">
+                        <h4>Marne-la-Vallée (HQ)</h4>
+                        <p>IUT de Marne-la-Vallée<br>2 Rue Albert Einstein<br>77420 Champs-sur-Marne</p>
+                    </div>
+                    <div class="footer-address-block">
+                        <h4>Paris</h4>
+                        <p>10 Allée Lydia Becker<br>75018 Paris - FRANCE</p>
+                    </div>
+                    <div class="footer-address-block">
+                        <h4>Lyon</h4>
+                        <p>Immeuble LE PRESIDENT<br>40/42 Av. Georges Pompidou<br>69003 Lyon - FRANCE</p>
+                    </div>
+                </div>
+                <div class="footer-nav">
+                    <h3 class="footer-heading">Nous Découvrir</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about.html">Qui sommes-nous</a></li>
+                        <li><a href="technologies.html">Technologies</a></li>
+                        <li><a href="realisations.html">Réalisations</a></li>
+                        <li><a href="recrutement.html">Recrutement</a></li>
+                        <li><a href="collaborons.html">Collaborons</a></li>
+                        <li><a href="mentions.html">Mentions légales</a></li>
+                        <li><a href="glossaire.html">Glossaire</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom font-mono">
+                <p>&copy; 2026 AZER TY SAS. All systems operational.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

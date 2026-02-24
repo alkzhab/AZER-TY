@@ -1,9 +1,7 @@
-/* // about page wrapper */
 .about-page-wrapper {
     padding-top: calc(var(--nav-height) + 60px);
 }
 
-/* // grid layout for alternating blocks */
 .about-block {
     padding: 60px 0;
     min-height: auto;
@@ -21,7 +19,6 @@
     font-size: 1.125rem;
 }
 
-/* // decorative image wrappers */
 .about-image-col {
     position: relative;
     padding: 20px;
@@ -66,7 +63,6 @@
     opacity: 0.15;
 }
 
-/* // leader specific styles (ceo and cto) */
 .leader-image-col {
     position: relative;
     padding: 30px;
@@ -92,7 +88,6 @@
     background-color: var(--card);
 }
 
-/* // solid background shapes like mayasquad */
 .leader-bg-blue {
     position: absolute;
     top: -20px;
@@ -115,7 +110,6 @@
     z-index: 0;
 }
 
-/* // styles for the leaders linkedin links */
 .leader-social {
     display: inline-flex;
     align-items: center;
@@ -137,7 +131,6 @@
     color: var(--blue);
 }
 
-/* // team circular grid section */
 .about-team-section {
     padding: 80px 0;
     min-height: auto;
@@ -145,9 +138,9 @@
 
 .team-circle-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -193,11 +186,10 @@
     color: var(--blue);
 }
 
-/* // commitment section full width */
 .about-commitment {
     padding: 100px 0;
     margin-top: 40px;
-    background-color: var(--blue); /* // updated to use azer ty brand blue */
+    background-color: var(--blue);
     min-height: auto;
     position: relative;
     overflow: hidden;
@@ -208,7 +200,6 @@
     z-index: 10;
 }
 
-/* // align the grid elements to the top for the commitment section */
 .commitment-grid-align {
     align-items: flex-start;
 }
@@ -218,7 +209,6 @@
     display: block;
 }
 
-/* // text utility classes for the blue section */
 .text-white {
     color: #ffffff !important;
 }
@@ -227,7 +217,6 @@
     color: rgba(255, 255, 255, 0.9);
 }
 
-/* // decorative floating elements for the blue background */
 .commitment-decor {
     position: absolute;
     background: rgba(255, 255, 255, 0.4);
@@ -259,14 +248,13 @@
     left: 48%;
 }
 
-/* // cta section */
 .about-cta {
     padding: 100px 0;
     min-height: auto;
 }
 
 .cta-banner {
-    background: linear-gradient(135deg, var(--green), var(--blue)); /* // updated to use azer ty brand gradient */
+    background: linear-gradient(135deg, var(--green), var(--blue));
     border-radius: 2rem;
     padding: 5rem 2rem;
     box-shadow: 0 20px 40px rgba(0, 160, 210, 0.2);
@@ -290,7 +278,7 @@
     border: 1px solid #ffffff;
     color: #ffffff;
     padding: 1rem 2rem;
-    border-radius: 9999px; /* // fully rounded like the image */
+    border-radius: 9999px;
     font-weight: 500;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -298,14 +286,14 @@
 
 .btn-outline-white:hover {
     background: #ffffff;
-    color: var(--blue); /* // updated to use azer ty brand blue */
+    color: var(--blue);
 }
 
 .btn-primary-dark {
     background: #ffffff;
-    color: var(--blue); /* // updated to use azer ty brand blue */
+    color: var(--blue);
     padding: 1rem 2rem;
-    border-radius: 9999px; /* // fully rounded like the image */
+    border-radius: 9999px;
     font-weight: 500;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -317,7 +305,6 @@
     box-shadow: 0 10px 15px rgba(0,0,0,0.2);
 }
 
-/* // responsive styles */
 @media (max-width: 992px) {
     .team-circle-grid {
         gap: 3rem 2rem;

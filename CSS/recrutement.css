@@ -1,15 +1,12 @@
-/* // recruitment page wrapper */
 .recrutement-page-wrapper {
     padding-top: calc(var(--nav-height) + 40px);
 }
 
-/* // section generic styling */
 .recrutement-section {
     padding: 60px 0;
     min-height: auto;
 }
 
-/* // utility class for vertical alignment in grids */
 .align-center {
     align-items: center;
 }
@@ -18,7 +15,6 @@
     align-items: flex-start;
 }
 
-/* // typography utilities */
 .section-text {
     font-size: 1.125rem;
     margin-bottom: 1.5rem;
@@ -30,7 +26,6 @@
     color: var(--heading);
 }
 
-/* // image decor styling reused and adapted from about */
 .image-col {
     position: relative;
     padding: 20px;
@@ -73,7 +68,6 @@
     background: var(--green);
 }
 
-/* // process grid (6 steps) */
 .process-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -100,7 +94,6 @@
     opacity: 0.9;
 }
 
-/* // advantages list */
 .advantages-list {
     list-style: none;
     margin-top: 2rem;
@@ -123,7 +116,6 @@
     border-radius: 50%;
 }
 
-/* // job opportunities list */
 .jobs-list {
     list-style: none;
     margin-top: 1.5rem;
@@ -163,7 +155,6 @@
     transform: translateX(5px);
 }
 
-/* // contact box section */
 .contact-box {
     position: relative;
     overflow: hidden;
@@ -201,7 +192,6 @@
     border: 1px solid var(--border);
 }
 
-/* // responsive styles */
 @media (max-width: 992px) {
     .process-grid {
         grid-template-columns: repeat(2, 1fr);

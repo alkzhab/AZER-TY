@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZER TY — Full Stack Development Agency</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&display=swap">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+
+    <script src="JS/header.js" defer></script>
+    <script src="JS/particules.js" defer></script>
+    <script src="JS/slides.js" defer></script>
+    <script src="JS/main.js" defer></script>
+</head>
+
+<body>
+    <header id="site-header">
+        <div class="header-inner">
+
+            <a href="index.html" class="logo">
+                <img src="Images/logo.png" alt="AZER TY — Web Solutions">
+            </a>
+
+            <nav>
+            <ul class="nav-list">
+                <li><a href="about.html">Qui sommes-nous</a></li>
+                <li><a href="technologies.html">Technologies</a></li>
+                <li><a href="realisations.html">Réalisations</a></li>
+                <li><a href="recrutement.html">Recrutement</a></li>
+                <li><a href="glossaire.html">Glossaire</a></li>
+            </ul>
+            </nav>
+
+            <div class="nav-cta">
+            <a href="collaborons.html" class="btn-contact">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+                Contactez-nous
+            </a>
+            </div>
+
+            <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+            </button>
+
+        </div>
+
+        <div class="mobile-menu" id="mobile-menu" role="navigation">
+            <a href="about.html">Qui sommes-nous</a>
+            <a href="technologies.html">Technologies</a>
+            <a href="realisations.html">Réalisations</a>
+            <a href="recrutement.html">Recrutement</a>
+            <a href="glossaire.html">Glossaire</a>
+            <div class="mobile-cta"><a href="collaborons.html">Contactez-nous</a></div>
+        </div>
+    </header>
+
+    <div class="animation-screen" id="animation-screen">
+
+        <div class="bg"></div>
+        <div class="grid"></div>
+        <div class="grain"></div>
+        <div class="scanlines"></div>
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <canvas class="particles-canvas" id="canvas"></canvas>
+
+        <div class="wrapper">
+            <div class="slide active" id="slide-0">
+                <p class="intro-badge">Full Stack Development Agency</p>
+                <div class="intro-logo">
+                    <img src="Images/logo.png" alt="AZER TY">
+                </div>
+                <p class="intro-tagline">Web. Mobile. Expérience.</p>
+                <div class="intro-line"></div>
+            </div>
+
+            <div class="slide" id="slide-1">
+                <p class="device-label">// Web Development</p>
+                <div class="monitor-wrap">
+                    <div class="monitor">
+                        <div class="browser-bar">
+                            <div class="browser-dot"></div>
+                            <div class="browser-dot"></div>
+                            <div class="browser-dot"></div>
+                            <div class="browser-url">
+                                <div class="url-lock"></div>
+                                <div class="url-text"><span>azer-ty.com</span></div>
+                            </div>
+                        </div>
+                        <div class="site-ui">
+                            <div class="site-nav">
+                                <div class="site-nav-logo">
+                                    <div class="site-nav-logo-sq"></div>
+                                    <div class="site-nav-logo-bar"></div>
+                                </div>
+                                <div class="site-nav-links">
+                                    <div class="site-nav-link"></div>
+                                    <div class="site-nav-link"></div>
+                                    <div class="site-nav-link"></div>
+                                </div>
+                                <div class="site-nav-cta"></div>
+                            </div>
+                            <div class="site-hero">
+                                <div class="site-hero-left">
+                                    <div class="site-hero-badge"><div class="site-hero-badge-dot"></div><div class="site-hero-badge-text"></div></div>
+                                    <div class="site-hero-h1-l1"></div>
+                                    <div class="site-hero-h1-l2"></div>
+                                    <div class="site-hero-sub-l1"></div>
+                                    <div class="site-hero-sub-l2"></div>
+                                    <div class="site-hero-btns">
+                                        <div class="site-btn-primary"></div>
+                                        <div class="site-btn-secondary"></div>
+                                    </div>
+                                </div>
+                                <div class="site-hero-right">
+                                    <div class="site-hero-chart">
+                                        <div class="chart-bar"></div>
+                                        <div class="chart-bar"></div>
+                                        <div class="chart-bar"></div>
+                                        <div class="chart-bar"></div>
+                                        <div class="chart-bar"></div>
+                                        <div class="chart-bar"></div>
+                                        <div class="chart-bar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="site-services">
+                                <div class="site-service-card">
+                                    <div class="service-icon-wrap c1">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                                    </div>
+                                    <div class="service-title"></div>
+                                    <div class="service-desc-1"></div>
+                                    <div class="service-desc-2"></div>
+                                </div>
+                                <div class="site-service-card">
+                                    <div class="service-icon-wrap c2">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                                    </div>
+                                    <div class="service-title"></div>
+                                    <div class="service-desc-1"></div>
+                                    <div class="service-desc-2"></div>
+                                </div>
+                                <div class="site-service-card">
+                                    <div class="service-icon-wrap c3">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                                    </div>
+                                    <div class="service-title"></div>
+                                    <div class="service-desc-1"></div>
+                                    <div class="service-desc-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="monitor-status">
+                            <div class="status-dot"></div>
+                            <div class="status-text">Next.js <b>·</b> TypeScript <b>·</b> Tailwind CSS <b>·</b> deployed in <b>1.2s</b></div>
+                        </div>
+                    </div>
+                    <div class="monitor-stand"></div>
+                    <div class="monitor-foot"></div>
+                </div>
+                <p class="device-title">Applications Web sur-mesure</p>
+            </div>
+
+            <div class="slide" id="slide-2">
+                <p class="device-label">// Mobile Development</p>
+                <div class="phones-row">
+                    <div class="phone secondary">
+                        <div class="phone-notch"></div>
+                        <div class="app-topbar">
+                            <div class="app-topbar-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                            </div>
+                            <div class="app-topbar-title">
+                                <div class="app-topbar-title-bar"></div>
+                                <div class="app-topbar-title-sub"></div>
+                            </div>
+                            <div class="app-avatar"></div>
+                        </div>
+                        <div class="app-stories">
+                            <div class="story-item"><div class="story-ring"><div class="story-inner"><div class="story-inner-dot" style="background:linear-gradient(135deg,var(--cyan),#3b82f6)"></div></div></div><div class="story-label"></div></div>
+                            <div class="story-item"><div class="story-ring seen"><div class="story-inner"><div class="story-inner-dot" style="background:linear-gradient(135deg,var(--emerald),var(--cyan))"></div></div></div><div class="story-label"></div></div>
+                            <div class="story-item"><div class="story-ring"><div class="story-inner"><div class="story-inner-dot" style="background:linear-gradient(135deg,var(--amber),#ef4444)"></div></div></div><div class="story-label"></div></div>
+                            <div class="story-item"><div class="story-ring seen"><div class="story-inner"><div class="story-inner-dot" style="background:linear-gradient(135deg,#8b5cf6,var(--cyan))"></div></div></div><div class="story-label"></div></div>
+                        </div>
+                        <div class="app-feed">
+                            <div class="feed-item">
+                                <div class="feed-header"><div class="feed-avatar a1"></div><div class="feed-name-wrap"><div class="feed-name"></div><div class="feed-time"></div></div><div class="feed-more"><div class="feed-more-dot"></div><div class="feed-more-dot"></div><div class="feed-more-dot"></div></div></div>
+                                <div class="feed-image img1"></div>
+                                <div class="feed-actions">
+                                    <div class="feed-action liked"><svg viewBox="0 0 24 24" fill="#ef4444" stroke="#ef4444" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><div class="feed-action-count"></div></div>
+                                    <div class="feed-action"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><div class="feed-action-count"></div></div>
+                                </div>
+                            </div>
+                            <div class="feed-item">
+                                <div class="feed-header"><div class="feed-avatar a3"></div><div class="feed-name-wrap"><div class="feed-name"></div><div class="feed-time"></div></div></div>
+                                <div class="feed-image img3"></div>
+                                <div class="feed-caption"><div class="feed-cap-l1"></div><div class="feed-cap-l2"></div></div>
+                            </div>
+                        </div>
+                        <div class="app-bottom-nav">
+                            <div class="app-nav-item active"><svg viewBox="0 0 24 24" fill="var(--cyan)" stroke="none"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/></svg><div class="app-nav-dot"></div></div>
+                            <div class="app-nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                            <div class="app-nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+                            <div class="app-nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+                        </div>
+                    </div>
+
+                    <div class="phone primary">
+                        <div class="phone-notch"></div>
+                        <div class="app-topbar">
+                            <div class="app-topbar-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                            </div>
+                            <div class="app-topbar-title">
+                                <div class="app-topbar-title-bar"></div>
+                                <div class="app-topbar-title-sub"></div>
+                            </div>
+                            <div class="app-avatar"></div>
+                        </div>
+                        <div class="app-stories">
+                            <div class="story-item"><div class="story-ring"><div class="story-inner"><div class="story-inner-dot" style="background:linear-gradient(135deg,var(--cyan),#3b82f6)"></div></div></div><div class="story-label"></div></div>
+                            <div class="story-item"><div class="story-ring"><div class="story-inner"><div class="story-inner-dot" style="background:linear-gradient(135deg,var(--emerald),var(--cyan))"></div></div></div><div class="story-label"></div></div>
+                            <div class="story-item"><div class="story-ring seen"><div class="story-inner"><div class="story-inner-dot" style="background:linear-gradient(135deg,var(--amber),#ef4444)"></div></div></div><div class="story-label"></div></div>
+                            <div class="story-item"><div class="story-ring"><div class="story-inner"><div class="story-inner-dot" style="background:linear-gradient(135deg,#8b5cf6,#ec4899)"></div></div></div><div class="story-label"></div></div>
+                        </div>
+                        <div class="app-search">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                            <div class="app-search-bar"></div>
+                        </div>
+                        <div class="app-feed">
+                            <div class="feed-item">
+                                <div class="feed-header"><div class="feed-avatar a1"></div><div class="feed-name-wrap"><div class="feed-name"></div><div class="feed-time"></div></div><div class="feed-more"><div class="feed-more-dot"></div><div class="feed-more-dot"></div><div class="feed-more-dot"></div></div></div>
+                                <div class="feed-image img1"><div class="feed-image-play"><svg viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div>
+                                <div class="feed-caption"><div class="feed-cap-l1"></div><div class="feed-cap-l2"></div></div>
+                                <div class="feed-actions">
+                                    <div class="feed-action liked"><svg viewBox="0 0 24 24" fill="#ef4444" stroke="#ef4444" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><div class="feed-action-count"></div></div>
+                                    <div class="feed-action"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><div class="feed-action-count"></div></div>
+                                    <div class="feed-share"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div>
+                                </div>
+                            </div>
+                            <div class="feed-item">
+                                <div class="feed-header"><div class="feed-avatar a2"></div><div class="feed-name-wrap"><div class="feed-name"></div><div class="feed-time"></div></div><div class="feed-more"><div class="feed-more-dot"></div><div class="feed-more-dot"></div><div class="feed-more-dot"></div></div></div>
+                                <div class="feed-image img2"></div>
+                                <div class="feed-caption"><div class="feed-cap-l1"></div><div class="feed-cap-l2"></div></div>
+                                <div class="feed-actions">
+                                    <div class="feed-action"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><div class="feed-action-count"></div></div>
+                                    <div class="feed-action"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><div class="feed-action-count"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-bottom-nav">
+                            <div class="app-nav-item active"><svg viewBox="0 0 24 24" fill="var(--cyan)" stroke="none"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z"/></svg><div class="app-nav-dot"></div></div>
+                            <div class="app-nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                            <div class="app-nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+                            <div class="app-nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+                        </div>
+                    </div>
+
+                </div>
+                <p class="device-title" style="animation-delay:0.9s">Apps iOS & Android natives</p>
+            </div>
+
+            <div class="slide" id="slide-3">
+                <p class="cta-eyebrow">Taper fort sur le Web</p>
+                <h2 class="cta-headline">
+                    <span class="line1">Construisons quelque</span>
+                    <span class="line2">chose d'exceptionnel.</span>
+                </h2>
+                <p class="cta-sub">Conception, Code et Performance — Web, Mobile, Design.</p>
+                <a href="collaborons.html"><button class="cta-btn">Contactez-nous →</button></a>
+            </div>
+        </div>
+
+        <div class="progress-track" id="progress">
+            <div class="progress-seg" id="seg-0"><div class="progress-seg-fill"></div></div>
+            <div class="progress-seg" id="seg-1"><div class="progress-seg-fill"></div></div>
+            <div class="progress-seg" id="seg-2"><div class="progress-seg-fill"></div></div>
+            <div class="progress-seg" id="seg-3"><div class="progress-seg-fill"></div></div>
+        </div>
+
+    </div>
+
+    <section class="tech-ticker-section">
+        <div class="ticker-label">
+            <span class="ticker-label-dot"></span>
+            On ne choisit que le meilleur pour vos projets
+        </div>
+
+        <div class="ticker-track">
+            <div class="ticker-row row-ltr">
+                
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"><span>HTML5</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"><span>CSS3</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"><span>PHP</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"><span>JavaScript</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript"><span>TypeScript</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"><span>React</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="Android"><span>Android</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js"><span>Next.js</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js"><span>Vue.js</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"><span>Node.js</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"><span>Java</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"><span>Python</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C"><span>C</span></div>
+                
+
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"><span>HTML5</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"><span>CSS3</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"><span>PHP</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"><span>JavaScript</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript"><span>TypeScript</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"><span>React</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="Android"><span>Android</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js"><span>Next.js</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js"><span>Vue.js</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"><span>Node.js</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"><span>Java</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"><span>Python</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C"><span>C</span></div>
+                
+            </div>
+        </div>
+
+        <div class="ticker-track">
+            <div class="ticker-row row-rtl">
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"><span>MySQL</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite"><span>SQLite</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mariadb/mariadb-original.svg" alt="MariaDB"><span>MariaDB</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"><span>PostgreSQL</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"><span>MongoDB</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"><span>Docker</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="JavaFX" style="filter: hue-rotate(150deg);"><span>JavaFX</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"><span>Git</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"><span>GitHub</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"><span>Figma</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind"><span>Tailwind CSS</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-plain.svg" alt="CodeIgniter"><span>CodeIgniter</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/maven/maven-original.svg" alt="Maven"><span>Maven</span></div>
+
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"><span>MySQL</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite"><span>SQLite</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mariadb/mariadb-original.svg" alt="MariaDB"><span>MariaDB</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"><span>PostgreSQL</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB"><span>MongoDB</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"><span>Docker</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="JavaFX" style="filter: hue-rotate(150deg);"><span>JavaFX</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"><span>Git</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"><span>GitHub</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"><span>Figma</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind"><span>Tailwind CSS</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-plain.svg" alt="CodeIgniter"><span>CodeIgniter</span></div>
+                <div class="ticker-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/maven/maven-original.svg" alt="Maven"><span>Maven</span></div>
+            </div>
+            <div style="text-align:center; margin-top: 2.5rem;">
+                <a href="technologies.html" class="ticker-cta-btn">
+                    Explorer toutes nos technologies
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="ideas-section">
+
+        <div class="ideas-bg-decor decor-circle-1"></div>
+        <div class="ideas-bg-decor decor-circle-2"></div>
+        <div class="ideas-bg-decor decor-line-1"></div>
+
+        <div class="ideas-container">
+            <div class="ideas-header">
+                <span class="ideas-eyebrow">Notre savoir-faire</span>
+                <h2 class="ideas-title">Transformer vos idées<br><em>en produits d'exception</em></h2>
+                <p class="ideas-subtitle">De la conception à la mise en ligne, nous couvrons chaque étape avec précision et passion.</p>
+            </div>
+
+            <div class="ideas-grid">
+
+                <div class="idea-card idea-card--large">
+                    <div class="idea-card-icon">
+                        <svg viewBox="0 0 48 48" fill="none"><rect x="4" y="8" width="40" height="28" rx="4" stroke="currentColor" stroke-width="2.5"/><path d="M16 40h16M24 36v4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><polyline points="12,24 18,18 24,24 30,16 36,22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="idea-card-content">
+                        <h3>Développement Web</h3>
+                        <p>Nous concevons des solutions sur-mesure pour transformer vos visiteurs en clients fidèles.</p>
+                        
+                        <ul class="idea-card-services">
+                            <li>Sites Vitrines</li>
+                            <li>Landing Page</li>
+                            <li>Portfolio</li>
+                            <li>Blog / Magazine en ligne</li>
+                            <li>E-commerce & Marketplaces</li>
+                            <li>Site de Réservation</li>
+                            <li>Plateformes SaaS</li>
+                            <li>Portail Intranet / Extranet</li>
+                        </ul>
+
+                        <ul class="idea-card-tags">
+                            <li>PHP</li><li>React</li><li>MySQL</li><li>Thailwind</li>
+                        </ul>
+                    </div>
+                    <div class="idea-card-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+
+                <div class="idea-card idea-card--accent">
+                    <div class="idea-card-icon">
+                        <svg viewBox="0 0 48 48" fill="none"><rect x="14" y="4" width="20" height="36" rx="4" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="36" r="2" fill="currentColor"/></svg>
+                    </div>
+                    <div class="idea-card-content">
+                        <h3>Apps Mobiles</h3>
+                        <p>Nous concevons des applications mobiles fluides et performantes qui placent votre business directement dans la poche de vos utilisateurs.</p>
+
+                        <ul class="idea-card-services">
+                            <li>Applications Android Natives</li>
+                            <li>Apps Cross-Platform</li>
+                            <li>Interfaces Mobiles (UI/UX)</li>
+                            <li>Maintenance & Évolution</li>
+                        </ul>
+
+                        <ul class="idea-card-tags">
+                            <li>React Native</li><li>Android</li><li>Java</li>
+                        </ul>
+                    </div>
+                    <div class="idea-card-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+
+                <div class="idea-card idea-card--accent">
+                    <div class="idea-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </div>
+                    <div class="idea-card-content">
+                        <h3>Logiciels & Systèmes</h3>
+                        <p>Nous développons des applications desktop robustes et des systèmes optimisés pour vos besoins complexes.</p>
+                        
+                        <ul class="idea-card-services">
+                            <li>Logiciels Desktop (Windows, Mac, Linux)</li>
+                            <li>Outils d'Automatisation & Scripting</li>
+                            <li>Optimisation de Performance (Bas niveau)</li>
+                        </ul>
+
+                        <ul class="idea-card-tags">
+                            <li>Java</li><li>Python</li><li>C</li>
+                        </ul>
+                    </div>
+                    <div class="idea-card-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+
+                <div class="idea-card idea-card--large idea-card--dark">
+                    <div class="idea-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l5 5"></path><path d="M9.5 14.5L16 8"></path></svg>
+                    </div>
+                    <div class="idea-card-content">
+                        <h3>Design UI/UX</h3>
+                        <p>Nous concevons des interfaces mémorables et cohérentes pour offrir une expérience utilisateur fluide sur tous vos supports.</p>
+                        
+                        <ul class="idea-card-services">
+                            <li>Recherche Utilisateur & Parcours Client</li>
+                            <li>Maquettes Haute Fidélité & Prototypes</li>
+                            <li>Création de Design Systems complets</li>
+                            <li>Identité Visuelle & Charte Graphique</li>
+                        </ul>
+
+                        <ul class="idea-card-tags">
+                            <li>Figma</li><li>UI/UX</li><li>Design System</li>
+                        </ul>
+                    </div>
+                    <div class="idea-card-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+
+                <div class="idea-card idea-card--full idea-card--cta">
+                    <div class="idea-cta-left">
+                        <h3>Un projet en tête ?</h3>
+                        <p>Discutons-en. Notre équipe vous répond sous 24h pour construire ensemble la solution idéale.</p>
+                    </div>
+                    <a href="collaborons.html" class="idea-cta-btn">
+                        Démarrer un projet
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="realisations-section">
+        <div class="real-container">
+            <div class="real-header">
+                <span class="real-eyebrow">Nos projets</span>
+                <h2 class="real-title">Quelques réalisations<br><em>dont nous sommes fiers</em></h2>
+                <p class="real-subtitle">Du concept au déploiement, voici une sélection de projets livrés avec soin.</p>
+            </div>
+
+            <div class="real-grid">
+
+                <article class="real-card real-card--featured">
+
+                    <div class="real-card-image">
+                        <img src="Images/mybrickstore.png" alt="MyBrickStore — Plateforme e-commerce">
+                    </div>
+                    
+                    <div class="real-card-info">
+                        <div class="real-card-tags-row">
+                            <span class="real-tag real-tag--web">E-commerce</span>
+                            <span class="real-tag">Plateforme web</span>
+                        </div>
+
+                        <h3>MyBrickStore</h3>
+                        <p>
+                            Plateforme e-commerce innovante dédiée à la création de mosaïques en briques.
+                            Développée sous une architecture MVC personnalisée, elle intègre des algorithmes
+                            de traitement d’images, une gestion des stocks en temps réel et un tunnel d’achat
+                            sécurisé, avec une interface d’administration complète pour le pilotage commercial.
+                        </p>
+                        <div class="real-card-stack">
+                            <span>PHP</span><span>HTML/CSS</span><span>JavaScript</span><span>MySQL</span><span>Java</span><span>C</span>
+                        </div>
+                        <a href="projet.html" class="real-card-link">Voir le projet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                    </div>
+                </article>
+
+                <article class="real-card">
+
+                    <div class="real-card-image">
+                        <img src="Images/mybrickgames.png" alt="MyBrickStore — Plateforme e-commerce">
+                    </div>
+                    
+                    <div class="real-card-info">
+                        <div class="real-card-tags-row">
+                            <span class="real-tag real-tag--mobile">Mobile</span>
+                            <span class="real-tag">Android</span>
+                        </div>
+                        <h3>MyBrickGames</h3>
+                        <p>
+                            MyBrickGames est une application mobile multijoueur en temps réel proposant plusieurs 
+                            modes de jeu, dont BrickMosaic, axé sur la reproduction fidèle d’images, et BrickLines, 
+                            un jeu stratégique basé sur l’alignement et la suppression de lignes colorées.
+                        </p>
+                        <div class="real-card-stack">
+                            <span>Node.js</span><span>React</span><span>TypeScript</span><span>Android</span><span>MongoDB</span>
+                        </div>
+                        <a href="#" class="real-card-link">Voir le projet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="real-footer">
+                <a href="realisations.html" class="real-cta-btn">
+                    Voir tous nos projets
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="approche-section">
+        <div class="approche-bg-decor ap-circle-1"></div>
+        <div class="approche-bg-decor ap-circle-2"></div>
+        <div class="approche-container">
+
+            <div class="approche-header">
+                <span class="approche-eyebrow">Comment nous travaillons</span>
+                <h2 class="approche-title">Notre approche</h2>
+                <p class="approche-intro">Chaque projet est unique. C’est pourquoi nous adoptons une approche structurée, centrée sur l’écoute, la collaboration et l’excellence. De la vision initiale jusqu’au suivi post-lancement, nous vous accompagnons à chaque étape pour garantir un résultat à la hauteur de vos objectifs.</p>
+            </div>
+
+            <div class="approche-steps">
+
+                <div class="approche-step">
+                    <div class="ap-step-number">01</div>
+                    <div class="ap-step-line"></div>
+                    <div class="ap-step-content">
+                        <div class="ap-step-icon">
+                            <svg viewBox="0 0 48 48" fill="none"><path d="M24 12c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M30 6l6 6-6 6M36 12H24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <h3>Votre vision, notre expertise</h3>
+                        <p>Vous apportez l’idée et la vision, nous mettons à votre service notre expertise digitale. À chaque étape du projet, nous vous accompagnons, vous conseillons et vous guidons pour transformer cette vision en réalité.</p>
+                    </div>
+                </div>
+
+                <div class="approche-step">
+                    <div class="ap-step-number">02</div>
+                    <div class="ap-step-line"></div>
+                    <div class="ap-step-content">
+                        <div class="ap-step-icon">
+                            <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="28" rx="4" stroke="currentColor" stroke-width="2.5"/><path d="M16 20h16M16 26h10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="34" cy="34" r="7" fill="#0a1f1c" stroke="currentColor" stroke-width="2.5"/><path d="M31 34l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <h3>Des parcours pensés pour vos utilisateurs</h3>
+                        <p>Nous concevons des designs attractifs et des parcours intuitifs, en parfaite cohérence avec votre vision et votre identité de marque, afin d’offrir une expérience utilisateur optimale.</p>
+                    </div>
+                </div>
+
+                <div class="approche-step">
+                    <div class="ap-step-number">03</div>
+                    <div class="ap-step-line"></div>
+                    <div class="ap-step-content">
+                        <div class="ap-step-icon">
+                            <svg viewBox="0 0 48 48" fill="none"><polyline points="10,30 18,18 24,24 30,14 38,22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 38h32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+                        </div>
+                        <h3>Développement web, mobile & logiciel</h3>
+                        <p>Notre équipe d’experts conçoit des solutions techniques sur mesure, performantes, fluides et innovantes.</p>
+                    </div>
+                </div>
+
+                <div class="approche-step">
+                    <div class="ap-step-number">04</div>
+                    <div class="ap-step-line ap-step-line--last"></div>
+                    <div class="ap-step-content">
+                        <div class="ap-step-icon">
+                            <svg viewBox="0 0 48 48" fill="none"><path d="M24 8v6M24 34v6M8 24h6M34 24h6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="24" cy="24" r="8" stroke="currentColor" stroke-width="2.5"/><path d="M14 14l4 4M30 30l4 4M14 34l4-4M30 18l4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        </div>
+                        <h3>Accompagnement durable</h3>
+                        <p>Notre accompagnement ne s’arrête pas à la livraison du projet. Nous assurons un suivi régulier ainsi que des mises à jour continues pour garantir sa pérennité.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="pourquoi-section">
+        <div class="pourquoi-container">
+
+            <div class="pourquoi-text">
+                <span class="pourquoi-eyebrow">Pourquoi nous choisir</span>
+                <h2 class="pourquoi-title">Une agence qui pense <em>partenariat</em>, pas prestation</h2>
+                <p class="pourquoi-desc">Chez AZER TY, nous ne livrons pas simplement du code. Nous construisons avec vous une relation de confiance durable, fondée sur la transparence, l'expertise et l'engagement total envers vos résultats.</p>
+
+                <div class="pourquoi-points">
+                    <div class="pourquoi-point">
+                        <div class="pp-icon pp-icon--cyan">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <div>
+                            <h4>Qualité sans compromis</h4>
+                            <p>Chaque ligne de code est revue, testée et optimisée. Notre process de qualité garantit des livrables robustes et maintenables sur le long terme.</p>
+                        </div>
+                    </div>
+                    <div class="pourquoi-point">
+                        <div class="pp-icon pp-icon--green">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <div>
+                            <h4>Livraison dans les délais</h4>
+                            <p>Méthodologie agile, sprints cadrés et communication continue. Vous savez toujours où en est votre projet, sans surprises en fin de parcours.</p>
+                        </div>
+                    </div>
+                    <div class="pourquoi-point">
+                        <div class="pp-icon pp-icon--amber">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <div>
+                            <h4>Une équipe pluridisciplinaire</h4>
+                            <p>Designers, développeurs front & back, experts data et stratèges digitaux — tout le savoir-faire dont vous avez besoin, sous un même toit.</p>
+                        </div>
+                    </div>
+                    <div class="pourquoi-point">
+                        <div class="pp-icon pp-icon--cyan">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        </div>
+                        <div>
+                            <h4>Orientés résultats</h4>
+                            <p>Nous mesurons notre succès à l'impact concret sur votre activité — conversion, engagement, croissance. Votre ROI est notre boussole.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pourquoi-visual">
+                <div class="pourquoi-img-wrap">
+                    <div class="pourquoi-img-decor"></div>
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="L'équipe AZER TY au travail" class="pourquoi-img">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="final-cta-section">
+        <div class="final-cta-container">
+            <div class="final-cta-glow"></div>
+            <span class="final-cta-eyebrow">On démarre quand vous voulez</span>
+            <h2 class="final-cta-title">Une idée ? Un projet ?<br><em>Parlons-en.</em></h2>
+            <p class="final-cta-sub">Notre équipe vous répond sous 24h. Pas de jargon, pas d'engagement — juste une vraie conversation.</p>
+            <div class="final-cta-actions">
+                <a href="collaborons.html" class="final-cta-btn-primary">
+                    Démarrer un projet
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="about.html" class="final-cta-btn-ghost">Découvrir l'équipe</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-decor">
+            <span class="footer-huge-logo font-mono">&lt;A/&gt;</span>
+        </div>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo font-mono">&lt;AZER TY/&gt;</div>
+                    <div class="footer-contact">
+                        <p class="font-mono">+33 1 02 03 04 05</p>
+                        <p class="font-mono">contact@azerty-solutions.fr</p>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#"><i class="fa-solid fa-earth-europe"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-addresses">
+                    <h3 class="footer-heading">Nos Adresses</h3>
+                    
+                    <div class="footer-address-block">
+                        <h4>Marne-la-Vallée (HQ)</h4>
+                        <p>IUT de Marne-la-Vallée<br>2 Rue Albert Einstein<br>77420 Champs-sur-Marne</p>
+                    </div>
+
+                    <div class="footer-address-block">
+                        <h4>Paris</h4>
+                        <p>10 Allée Lydia Becker<br>75018 Paris - FRANCE</p>
+                    </div>
+
+                    <div class="footer-address-block">
+                        <h4>Lyon</h4>
+                        <p>Immeuble LE PRESIDENT<br>40/42 Av. Georges Pompidou<br>69003 Lyon - FRANCE</p>
+                    </div>
+                </div>
+
+                <div class="footer-nav">
+                    <h3 class="footer-heading">Nous Découvrir</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about.html">Qui sommes nous</a></li>
+                        <li><a href="technologies.html">Technologies</a></li>
+                        <li><a href="realisations.html">Réalisations</a></li>
+                        <li><a href="recrutement.html">Recrutement</a></li>
+                        <li><a href="collaborons.html">Collaborons</a></li>
+                        <li><a href="mentions.html">Mentions légales</a></li>
+                        <li><a href="/glossaire">Glossaire</a></li>                
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom font-mono">
+                <p>&copy; 2026 AZER TY SAS. All systems operational.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

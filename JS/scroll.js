@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // options for intersection observer
     const observerOptions = { threshold: 0.1 };
     
     const observer = new IntersectionObserver((entries) => {
@@ -11,6 +10,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    // observe elements with reveal class
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 });

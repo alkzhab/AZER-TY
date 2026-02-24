@@ -1,61 +1,78 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <!-- // meta tags and title -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AZER TY - Technologies</title>
-    
-    <!-- // google fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    
-    <!-- // font awesome for custom icons -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;600;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- // devicon for technology logos -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     
-    <!-- // custom css -->
+     <link rel="stylesheet" href="CSS/header.css">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/technologies.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+
+    <script src="JS/header.js" defer></script>
+    <script src="JS/flip.js" defer></script>
+    <script src="JS/particules.js" defer></script>
+    <script src="JS/scroll.js" defer></script>
+    <script src="JS/tilt.js" defer></script>
 </head>
+
 <body>
-    <!-- // page loader -->
-    <div id="loader">
-        <div class="text-center">
-            <span class="font-mono" style="font-size: 1.5rem; font-weight: bold; color: var(--heading); letter-spacing: 2px;">&lt;AZER TY/&gt;</span>
-            <div class="loader-bar"><div class="loader-progress"></div></div>
+    <header id="site-header">
+        <div class="header-inner">
+
+            <a href="index.html" class="logo">
+                <img src="Images/logo.png" alt="AZER TY — Web Solutions">
+            </a>
+
+            <nav>
+            <ul class="nav-list">
+                <li><a href="about.html">Qui sommes-nous</a></li>
+                <li><a href="technologies.html" class="active">Technologies</a></li>
+                <li><a href="realisations.html">Réalisations</a></li>
+                <li><a href="recrutement.html">Recrutement</a></li>
+                <li><a href="glossaire.html">Glossaire</a></li>
+            </ul>
+            </nav>
+
+            <div class="nav-cta">
+            <a href="collaborons.html" class="btn-contact">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+                Contactez-nous
+            </a>
+            </div>
+
+            <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+            </button>
+
         </div>
-    </div>
+
+        <div class="mobile-menu" id="mobile-menu" role="navigation">
+            <a href="about.html">Qui sommes-nous</a>
+            <a href="technologies.html">Technologies</a>
+            <a href="realisations.html">Réalisations</a>
+            <a href="recrutement.html">Recrutement</a>
+            <a href="glossaire.html">Glossaire</a>
+            <div class="mobile-cta"><a href="collaborons.html">Contactez-nous</a></div>
+        </div>
+    </header>
     
-    <!-- // background elements -->
     <div id="particles-js"></div>
     <div class="bg-grid"></div>
 
-    <!-- // main navigation header -->
-    <nav class="navbar">
-        <div class="container">
-            <!-- // logo section -->
-            <a href="home.html" class="nav-logo">
-                <img src="Images/logo.png" alt="AZER TY Logo">
-            </a>
-            
-            <!-- // navigation links -->
-            <div class="nav-links">
-                <a href="home.html" class="nav-link active">Accueil</a>
-                <a href="about.html" class="nav-link">A propos</a>
-                <a href="technologies.html" class="nav-link">Technologies</a>
-                <a href="realisations.html" class="nav-link">Réalisations</a>
-                <a href="recrutement.html" class="nav-link">Recrutement</a>
-                <a href="collaborons.html" class="btn btn-primary btn-nav">Collaborons</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- // main content wrapper -->
     <main class="technologie-page-wrapper">
 
-        <!-- // header section -->
         <section class="tech-header-section reveal">
             <div class="container text-center">
                 <div class="tag font-mono text-uppercase">TECHNOLOGIES</div>
@@ -67,99 +84,417 @@
             </div>
         </section>
 
-        <!-- // technologies grid section -->
         <section class="tech-grid-section reveal delay-100">
             <div class="container">
+
+                <h2 class="tech-category-title">Langages</h2>
                 <div class="tech-grid">
-                    
-                    <!-- // python -->
-                    <div class="tech-card tilt-card">
-                        <i class="devicon-python-plain colored"></i>
-                    </div>
 
-                    <!-- // java -->
-                    <div class="tech-card tilt-card">
-                        <i class="devicon-java-plain colored"></i>
-                    </div>
-
-                    <!-- // php -->
-                    <div class="tech-card tilt-card">
-                        <i class="devicon-php-plain colored"></i>
-                    </div>
-
-                    <!-- // javascript -->
-                    <div class="tech-card tilt-card">
-                        <i class="devicon-javascript-plain colored"></i>
-                    </div>
-
-                    <!-- // typescript -->
-                    <div class="tech-card tilt-card">
-                        <i class="devicon-typescript-plain colored"></i>
-                    </div>
-
-                    <!-- // codeigniter -->
-                    <div class="tech-card tilt-card">
-                        <i class="devicon-codeigniter-plain colored"></i>
-                    </div>
-
-                    <!-- // react -->
-                    <div class="tech-card tilt-card">
-                        <i class="devicon-react-original colored"></i>
-                    </div>
-
-                    <!-- // nodejs -->
-                    <div class="tech-card tilt-card">
-                        <i class="devicon-nodejs-plain colored"></i>
-                    </div>
-
-                    <!-- // pygame (custom text logo) -->
-                    <div class="tech-card tilt-card">
-                        <div class="custom-logo">
-                            <i class="fa-solid fa-gamepad" style="color: #64b969; font-size: 2.5rem; margin-bottom: 0.5rem;"></i>
-                            <span style="font-weight: 800; font-size: 1.2rem; color: #f0e68c; text-shadow: 1px 1px 0px #333;">pygame</span>
+                    <div class="tech-flip-card" tabindex="0">
+                        <div class="tech-flip-inner">
+                            <div class="tech-flip-front">
+                                <i class="devicon-python-plain colored"></i>
+                                <span class="tech-name">Python</span>
+                            </div>
+                            <div class="tech-flip-back">
+                                <h4>Python</h4>
+                                <p>Utilisé pour le scripting, l'automatisation, le traitement de données et le développement d'algorithmes. Sa lisibilité et ses librairies en font un choix idéal pour les projets d'analyse et d'IA.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- // c language -->
-                    <div class="tech-card tilt-card">
-                        <i class="devicon-c-plain colored"></i>
-                    </div>
-
-                    <!-- // html5 -->
-                    <div class="tech-card tilt-card">
-                        <i class="devicon-html5-plain colored"></i>
-                    </div>
-
-                    <!-- // css3 -->
-                    <div class="tech-card tilt-card">
-                        <i class="devicon-css3-plain colored"></i>
-                    </div>
-
-                    <!-- // git -->
-                    <div class="tech-card tilt-card">
-                        <i class="devicon-git-plain colored"></i>
-                    </div>
-
-                    <!-- // maven (custom text logo) -->
-                    <div class="tech-card tilt-card">
-                        <div class="custom-logo">
-                            <span style="color: #c71a22; font-weight: 900; font-size: 3rem; font-style: italic; line-height: 1;">M</span>
-                            <span style="font-size: 0.9rem; font-weight: bold; color: var(--heading); margin-top: 0.2rem;">Maven</span>
+                    <div class="tech-flip-card" tabindex="0">
+                        <div class="tech-flip-inner">
+                            <div class="tech-flip-front">
+                                <i class="devicon-java-plain colored"></i>
+                                <span class="tech-name">Java</span>
+                            </div>
+                            <div class="tech-flip-back">
+                                <h4>Java</h4>
+                                <p>Langage robuste orienté objet, utilisé pour des applications desktop, Android, et des backends solides. Sa portabilité (JVM) garantit une exécution sur toutes les plateformes.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- // java units / junit (custom text logo) -->
-                    <div class="tech-card tilt-card">
-                        <div class="custom-logo">
-                            <span style="color: #25a162; font-weight: 900; font-size: 1.8rem; line-height: 1;">JUnit</span>
-                            <span style="font-size: 0.8rem; font-weight: 600; color: var(--text); margin-top: 0.2rem;">Testing</span>
+                    <div class="tech-flip-card" tabindex="0">
+                        <div class="tech-flip-inner">
+                            <div class="tech-flip-front">
+                                <i class="devicon-php-plain colored"></i>
+                                <span class="tech-name">PHP</span>
+                            </div>
+                            <div class="tech-flip-back">
+                                <h4>PHP</h4>
+                                <p>Langage serveur incontournable pour le web dynamique. Utilisé pour créer des APIs, des CMS personnalisés et des applications web en architecture MVC.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- // picocss (custom text logo) -->
-                    <div class="tech-card tilt-card">
-                        <div class="custom-logo">
-                            <span style="color: #0176D3; font-weight: 800; font-size: 2rem; line-height: 1;">pico<span style="color: var(--heading);">.</span></span>
+                    <div class="tech-flip-card" tabindex="0">
+                        <div class="tech-flip-inner">
+                            <div class="tech-flip-front">
+                                <i class="devicon-javascript-plain colored"></i>
+                                <span class="tech-name">JavaScript</span>
+                            </div>
+                            <div class="tech-flip-back">
+                                <h4>JavaScript</h4>
+                                <p>Le langage du web par excellence. Utilisé côté client pour les interactions dynamiques, et côté serveur via Node.js. Indispensable pour tout projet web moderne.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-flip-card" tabindex="0">
+                        <div class="tech-flip-inner">
+                            <div class="tech-flip-front">
+                                <i class="devicon-typescript-plain colored"></i>
+                                <span class="tech-name">TypeScript</span>
+                            </div>
+                            <div class="tech-flip-back">
+                                <h4>TypeScript</h4>
+                                <p>Superset de JavaScript avec typage statique. Améliore la maintenabilité et la détection d'erreurs. Privilégié sur les projets React, Node.js et Angular de grande envergure.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-flip-card" tabindex="0">
+                        <div class="tech-flip-inner">
+                            <div class="tech-flip-front">
+                                <i class="devicon-c-plain colored"></i>
+                                <span class="tech-name">C</span>
+                            </div>
+                            <div class="tech-flip-back">
+                                <h4>C</h4>
+                                <p>Langage bas niveau pour la programmation système, les algorithmes performants et les projets nécessitant un contrôle précis de la mémoire et des ressources.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <h2 class="tech-category-title">Frontend</h2>
+                <div class="tech-grid">
+
+                    <div class="tech-flip-card" tabindex="0">
+                        <div class="tech-flip-inner">
+                            <div class="tech-flip-front">
+                                <i class="devicon-html5-plain colored"></i>
+                                <span class="tech-name">HTML5</span>
+                            </div>
+                            <div class="tech-flip-back">
+                                <h4>HTML5</h4>
+                                <p>Structure sémantique de toutes nos pages web. Utilisé pour garantir accessibilité, SEO et une base solide pour chaque interface.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-flip-card" tabindex="0">
+                        <div class="tech-flip-inner">
+                            <div class="tech-flip-front">
+                                <i class="devicon-css3-plain colored"></i>
+                                <span class="tech-name">CSS3</span>
+                            </div>
+                            <div class="tech-flip-back">
+                                <h4>CSS3</h4>
+                                <p>Stylisation avancée des interfaces : animations, flexbox, grid, variables CSS. Utilisé pour concevoir des UI modernes, responsive et esthétiques.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-flip-card" tabindex="0">
+                        <div class="tech-flip-inner">
+                            <div class="tech-flip-front">
+                                <i class="devicon-react-original colored"></i>
+                                <span class="tech-name">React</span>
+                            </div>
+                            <div class="tech-flip-back">
+                                <h4>React</h4>
+                                <p>Librairie UI pour des interfaces composant-based réactives. Utilisé pour des SPA performantes, des dashboards, et toute application nécessitant un état dynamique.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-flip-card" tabindex="0">
+                        <div class="tech-flip-inner">
+                            <div class="tech-flip-front">
+                                <i class="devicon-vuejs-plain colored"></i>
+                                <span class="tech-name">Vue.js</span>
+                            </div>
+                            <div class="tech-flip-back">
+                                <h4>Vue.js</h4>
+                                <p>Framework progressif et accessible pour construire des interfaces web. Apprécié pour sa courbe d'apprentissage douce et son intégration facile dans des projets existants.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-flip-card" tabindex="0">
+                        <div class="tech-flip-inner">
+                            <div class="tech-flip-front">
+                                <i class="devicon-nextjs-plain"></i>
+                                <span class="tech-name">Next.js</span>
+                            </div>
+                            <div class="tech-flip-back">
+                                <h4>Next.js</h4>
+                                <p>Framework React pour le SSR et SSG. Utilisé pour des applications web SEO-friendly, des sites à fort trafic et des projets full-stack avec API Routes intégrées.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-flip-card" tabindex="0">
+                        <div class="tech-flip-inner">
+                            <div class="tech-flip-front">
+                                <i class="devicon-tailwindcss-plain colored"></i>
+                                <span class="tech-name">Tailwind CSS</span>
+                            </div>
+                            <div class="tech-flip-back">
+                                <h4>Tailwind CSS</h4>
+                                <p>Framework CSS utility-first pour un styling rapide et cohérent. Idéal pour prototyper et produire des interfaces modernes sans quitter le HTML.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-flip-card" tabindex="0">
+                        <div class="tech-flip-inner">
+                            <div class="tech-flip-front">
+                                <div class="custom-logo">
+                                    <span style="color: #0176D3; font-weight: 800; font-size: 2rem; line-height: 1;">pico<span style="color: var(--heading);">.</span></span>
+                                </div>
+                                <span class="tech-name">Pico CSS</span>
+                            </div>
+                            <div class="tech-flip-back">
+                                <h4>Pico CSS</h4>
+                                <p>Framework CSS minimaliste sans classes. Utilisé pour des projets légers où la rapidité de mise en place prime sur la personnalisation avancée.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <h2 class="tech-category-title">Backend & Frameworks</h2>
+                <div class="tech-grid">
+
+                    <div class="tech-flip-card" tabindex="0">
+                        <div class="tech-flip-inner">
+                            <div class="tech-flip-front">
+                                <i class="devicon-nodejs-plain colored"></i>
+                                <span class="tech-name">Node.js</span>
+                            </div>
+                            <div class="tech-flip-back">
+                                <h4>Node.js</h4>
+                                <p>Runtime JavaScript côté serveur. Utilisé pour construire des APIs RESTful, des WebSockets temps réel et des microservices performants et scalables.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-flip-card" tabindex="0">
+                        <div class="tech-flip-inner">
+                            <div class="tech-flip-front">
+                                <i class="devicon-codeigniter-plain colored"></i>
+                                <span class="tech-name">CodeIgniter</span>
+                            </div>
+                            <div class="tech-flip-back">
+                                <h4>CodeIgniter</h4>
+                                <p>Framework PHP léger en architecture MVC. Utilisé pour des applications web structurées avec des performances élevées et une empreinte minimale.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-flip-card" tabindex="0">
+                        <div class="tech-flip-inner">
+                            <div class="tech-flip-front">
+                                <i class="devicon-android-plain colored"></i>
+                                <span class="tech-name">Android</span>
+                            </div>
+                            <div class="tech-flip-back">
+                                <h4>Android</h4>
+                                <p>Développement d'applications mobiles natives pour le système Android. Utilisé pour des apps avec accès aux capteurs, notifications push et fonctionnalités offline.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-flip-card" tabindex="0">
+                        <div class="tech-flip-inner">
+                            <div class="tech-flip-front">
+                                <div class="custom-logo">
+                                    <i class="fa-solid fa-gamepad" style="color: #64b969; font-size: 2.5rem; margin-bottom: 0.5rem;"></i>
+                                    <span style="font-weight: 800; font-size: 1.1rem; color: #f0e68c;">pygame</span>
+                                </div>
+                                <span class="tech-name">Pygame</span>
+                            </div>
+                            <div class="tech-flip-back">
+                                <h4>Pygame</h4>
+                                <p>Librairie Python pour la création de jeux 2D. Utilisée pour des projets ludiques, éducatifs ou des prototypes interactifs nécessitant rendu graphique et gestion d'événements.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <h2 class="tech-category-title">Bases de données</h2>
+                <div class="tech-grid">
+
+                    <div class="tech-flip-card" tabindex="0">
+                        <div class="tech-flip-inner">
+                            <div class="tech-flip-front">
+                                <i class="devicon-mysql-plain colored"></i>
+                                <span class="tech-name">MySQL</span>
+                            </div>
+                            <div class="tech-flip-back">
+                                <h4>MySQL</h4>
+                                <p>SGBD relationnel le plus répandu. Utilisé pour des applications web standard, des plateformes e-commerce et tout projet nécessitant des relations de données structurées.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-flip-card" tabindex="0">
+                        <div class="tech-flip-inner">
+                            <div class="tech-flip-front">
+                                <i class="devicon-sqlite-plain colored"></i>
+                                <span class="tech-name">SQLite</span>
+                            </div>
+                            <div class="tech-flip-back">
+                                <h4>SQLite</h4>
+                                <p>Base de données embarquée sans serveur. Idéale pour les applications mobiles, les prototypes, les outils desktop légers ou les environnements de développement local.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-flip-card" tabindex="0">
+                        <div class="tech-flip-inner">
+                            <div class="tech-flip-front">
+                                <i class="devicon-mariadb-plain colored"></i>
+                                <span class="tech-name">MariaDB</span>
+                            </div>
+                            <div class="tech-flip-back">
+                                <h4>MariaDB</h4>
+                                <p>Fork open-source de MySQL, plus performant et communautaire. Utilisé comme alternative à MySQL pour des projets nécessitant des fonctionnalités avancées et une licence libre.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-flip-card" tabindex="0">
+                        <div class="tech-flip-inner">
+                            <div class="tech-flip-front">
+                                <i class="devicon-postgresql-plain colored"></i>
+                                <span class="tech-name">PostgreSQL</span>
+                            </div>
+                            <div class="tech-flip-back">
+                                <h4>PostgreSQL</h4>
+                                <p>SGBD relationnel avancé avec support JSON, UUID et extensions géospatiales. Privilégié pour des projets complexes nécessitant robustesse et conformité ACID stricte.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-flip-card" tabindex="0">
+                        <div class="tech-flip-inner">
+                            <div class="tech-flip-front">
+                                <i class="devicon-mongodb-plain colored"></i>
+                                <span class="tech-name">MongoDB</span>
+                            </div>
+                            <div class="tech-flip-back">
+                                <h4>MongoDB</h4>
+                                <p>Base NoSQL orientée documents JSON. Utilisée pour des applications nécessitant une structure flexible, un scaling horizontal et des données non-tabulaires (logs, catalogues).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <h2 class="tech-category-title">Outils & DevOps</h2>
+                <div class="tech-grid">
+
+                    <div class="tech-flip-card" tabindex="0">
+                        <div class="tech-flip-inner">
+                            <div class="tech-flip-front">
+                                <i class="devicon-git-plain colored"></i>
+                                <span class="tech-name">Git</span>
+                            </div>
+                            <div class="tech-flip-back">
+                                <h4>Git</h4>
+                                <p>Système de contrôle de version distribué. Utilisé sur tous nos projets pour la gestion des branches, le suivi des modifications et la collaboration en équipe.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-flip-card" tabindex="0">
+                        <div class="tech-flip-inner">
+                            <div class="tech-flip-front">
+                                <i class="devicon-github-original"></i>
+                                <span class="tech-name">GitHub</span>
+                            </div>
+                            <div class="tech-flip-back">
+                                <h4>GitHub</h4>
+                                <p>Plateforme d'hébergement de code et de collaboration. Utilisée pour la gestion de projets, les pull requests, la CI/CD et le déploiement automatisé.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-flip-card" tabindex="0">
+                        <div class="tech-flip-inner">
+                            <div class="tech-flip-front">
+                                <i class="devicon-docker-plain colored"></i>
+                                <span class="tech-name">Docker</span>
+                            </div>
+                            <div class="tech-flip-back">
+                                <h4>Docker</h4>
+                                <p>Containerisation d'applications pour garantir la reproductibilité des environnements. Utilisé pour le déploiement, les microservices et l'isolation des dépendances.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-flip-card" tabindex="0">
+                        <div class="tech-flip-inner">
+                            <div class="tech-flip-front">
+                                <i class="devicon-maven-plain colored"></i>
+                                <span class="tech-name">Maven</span>
+                            </div>
+                            <div class="tech-flip-back">
+                                <h4>Maven</h4>
+                                <p>Outil de build et de gestion des dépendances pour projets Java. Standardise la structure des projets et automatise compilation, tests et packaging.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-flip-card" tabindex="0">
+                        <div class="tech-flip-inner">
+                            <div class="tech-flip-front">
+                                <div class="custom-logo">
+                                    <span style="color: #25a162; font-weight: 900; font-size: 1.8rem; line-height: 1;">JUnit</span>
+                                    <span style="font-size: 0.75rem; font-weight: 600; color: var(--text);">Testing</span>
+                                </div>
+                                <span class="tech-name">JUnit</span>
+                            </div>
+                            <div class="tech-flip-back">
+                                <h4>JUnit</h4>
+                                <p>Framework de tests unitaires Java. Utilisé pour valider le comportement de chaque composant de manière isolée, garantissant qualité et non-régression du code.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-flip-card" tabindex="0">
+                        <div class="tech-flip-inner">
+                            <div class="tech-flip-front">
+                                <i class="devicon-figma-plain colored"></i>
+                                <span class="tech-name">Figma</span>
+                            </div>
+                            <div class="tech-flip-back">
+                                <h4>Figma</h4>
+                                <p>Outil de design UI/UX collaboratif. Utilisé pour la conception de maquettes, prototypes interactifs et la communication entre designers et développeurs.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-flip-card" tabindex="0">
+                        <div class="tech-flip-inner">
+                            <div class="tech-flip-front">
+                                <div class="custom-logo javafx-logo">
+                                    <i class="devicon-java-plain colored" style="font-size: 3rem;"></i>
+                                    <span style="font-size: 0.75rem; font-weight: 800; color: var(--blue); letter-spacing: 0.05em;">FX</span>
+                                </div>
+                                <span class="tech-name">JavaFX</span>
+                            </div>
+                            <div class="tech-flip-back">
+                                <h4>JavaFX</h4>
+                                <p>Framework Java pour les interfaces graphiques desktop modernes. Utilisé pour des applications de bureau riches avec animations, graphiques et composants UI natifs.</p>
+                            </div>
                         </div>
                     </div>
 
@@ -169,14 +504,12 @@
 
     </main>
 
-    <!-- // large modern footer -->
     <footer class="site-footer">
         <div class="footer-decor">
             <span class="footer-huge-logo font-mono">&lt;A/&gt;</span>
         </div>
         <div class="footer-container">
             <div class="footer-grid">
-                <!-- // brand and contact col -->
                 <div class="footer-brand">
                     <div class="footer-logo font-mono">&lt;AZER TY/&gt;</div>
                     <div class="footer-contact">
@@ -187,12 +520,10 @@
                         <a href="#"><i class="fa-solid fa-earth-europe"></i></a>
                         <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="#"><i class="fa-brands fa-github"></i></a>
-                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
 
-                <!-- // addresses col -->
                 <div class="footer-addresses">
                     <h3 class="footer-heading">Nos Adresses</h3>
                     
@@ -212,7 +543,6 @@
                     </div>
                 </div>
 
-                <!-- // links col -->
                 <div class="footer-nav">
                     <h3 class="footer-heading">Nous Découvrir</h3>
                     <ul class="footer-links">
@@ -227,19 +557,10 @@
                 </div>
             </div>
 
-            <!-- // copyright -->
             <div class="footer-bottom font-mono">
                 <p>&copy; 2026 AZER TY SAS. All systems operational.</p>
             </div>
         </div>
     </footer>
-
-    <!-- // javascript external files -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
-    <script src="Animations/loader.js"></script>
-    <script src="Animations/particules.js"></script>
-    <script src="Animations/scroll.js"></script>
-    <script src="Animations/tilt.js"></script>
 </body>
 </html>

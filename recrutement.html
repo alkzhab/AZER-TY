@@ -1,58 +1,75 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <!-- // meta tags and title -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AZER TY - Recrutement</title>
     
-    <!-- // google fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    
-    <!-- // font awesome -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;600;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- // custom css -->
+    <link rel="stylesheet" href="CSS/header.css">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/recrutement.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script src="JS/header.js" defer></script>
+    <script src="JS/particules.js"></script>
+    <script src="JS/scroll.js"></script>
+    <script src="JS/tilt.js"></script>
 </head>
+
 <body>
-    <!-- // loader -->
-    <div id="loader">
-        <div class="text-center">
-            <span class="font-mono" style="font-size: 1.5rem; font-weight: bold; color: var(--heading); letter-spacing: 2px;">&lt;AZER TY/&gt;</span>
-            <div class="loader-bar"><div class="loader-progress"></div></div>
+
+    <header id="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <img src="Images/logo.png" alt="AZER TY — Web Solutions">
+            </a>
+
+            <nav>
+            <ul class="nav-list">
+                <li><a href="about.html">Qui sommes-nous</a></li>
+                <li><a href="technologies.html">Technologies</a></li>
+                <li><a href="realisations.html">Réalisations</a></li>
+                <li><a href="recrutement.html" class="active">Recrutement</a></li>
+                <li><a href="glossaire.html">Glossaire</a></li>
+            </ul>
+            </nav>
+
+            <div class="nav-cta">
+            <a href="collaborons.html" class="btn-contact">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+                Contactez-nous
+            </a>
+            </div>
+
+            <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+            </button>
+
         </div>
-    </div>
+
+        <div class="mobile-menu" id="mobile-menu" role="navigation">
+            <a href="about.html">Qui sommes-nous</a>
+            <a href="technologies.html">Technologies</a>
+            <a href="realisations.html">Réalisations</a>
+            <a href="recrutement.html">Recrutement</a>
+            <a href="glossaire.html">Glossaire</a>
+            <div class="mobile-cta"><a href="collaborons.html">Contactez-nous</a></div>
+        </div>
+    </header>
     
-    <!-- // background elements -->
     <div id="particles-js"></div>
     <div class="bg-grid"></div>
 
-    <!-- // main navigation header -->
-    <nav class="navbar">
-        <div class="container">
-            <!-- // logo section -->
-            <a href="home.html" class="nav-logo">
-                <img src="Images/logo.png" alt="AZER TY Logo">
-            </a>
-            
-            <!-- // navigation links -->
-            <div class="nav-links">
-                <a href="home.html" class="nav-link active">Accueil</a>
-                <a href="about.html" class="nav-link">A propos</a>
-                <a href="technologies.html" class="nav-link">Technologies</a>
-                <a href="realisations.html" class="nav-link">Réalisations</a>
-                <a href="recrutement.html" class="nav-link">Recrutement</a>
-                <a href="collaborons.html" class="btn btn-primary btn-nav">Collaborons</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- // main content wrapper -->
     <main class="recrutement-page-wrapper">
 
-        <!-- // section 1 : hero (text left, image right) -->
         <section class="recrutement-section reveal">
             <div class="container">
                 <div class="grid-2 align-center hero-reverse-mobile">
@@ -75,7 +92,6 @@
             </div>
         </section>
 
-        <!-- // section 2 : process grid (6 steps) -->
         <section class="recrutement-section reveal delay-100">
             <div class="container">
                 <div class="text-center">
@@ -83,42 +99,36 @@
                 </div>
 
                 <div class="process-grid">
-                    <!-- // step 1 -->
                     <div class="card tilt-card process-card">
                         <span class="step-number text-gradient font-mono">01</span>
                         <h3 class="title-small">Envoi de votre candidature</h3>
                         <p>Envoyez-nous une candidature où nous pouvons avoir un état des lieux de votre parcours, vos projets et vos envies professionnelles.</p>
                     </div>
                     
-                    <!-- // step 2 -->
                     <div class="card tilt-card process-card">
                         <span class="step-number text-gradient font-mono">02</span>
                         <h3 class="title-small">Étude de votre candidature</h3>
                         <p>Un peu de patience : nous répondons à chaque candidature sous un délai maximum de 30 jours !</p>
                     </div>
 
-                    <!-- // step 3 -->
                     <div class="card tilt-card process-card">
                         <span class="step-number text-gradient font-mono">03</span>
                         <h3 class="title-small">Envoi d'un test</h3>
                         <p>Vous postulez à un poste technique ? Nous vous transmettons un test en ligne sur vos connaissances. Celui-ci permet d'orienter les sujets de l'entretien.</p>
                     </div>
 
-                    <!-- // step 4 -->
                     <div class="card tilt-card process-card">
                         <span class="step-number text-gradient font-mono">04</span>
                         <h3 class="title-small">Entretien</h3>
                         <p>Le moment où nous nous rencontrons. Réalisé en duo, nous évoquons votre parcours, vous présentons en détail notre vision et notre grille de salaires.</p>
                     </div>
 
-                    <!-- // step 5 -->
                     <div class="card tilt-card process-card">
                         <span class="step-number text-gradient font-mono">05</span>
                         <h3 class="title-small">Validation de l'équipe</h3>
                         <p>Suite à cet entretien, nos collaborateurs rédigent un compte rendu et nous procédons à une validation collective de la candidature.</p>
                     </div>
 
-                    <!-- // step 6 -->
                     <div class="card tilt-card process-card">
                         <span class="step-number text-gradient font-mono">06</span>
                         <h3 class="title-small">Étape finale</h3>
@@ -128,7 +138,6 @@
             </div>
         </section>
 
-        <!-- // section 3 : advantages (image left, list right) -->
         <section class="recrutement-section reveal delay-100">
             <div class="container">
                 <div class="grid-2 align-center">
@@ -154,7 +163,6 @@
             </div>
         </section>
 
-        <!-- // section 4 : opportunities (list left, image right) -->
         <section class="recrutement-section reveal delay-100">
             <div class="container">
                 <div class="grid-2 align-center hero-reverse-mobile">
@@ -180,13 +188,11 @@
             </div>
         </section>
 
-        <!-- // section 5 : contact and form -->
         <section class="recrutement-section reveal delay-200" style="padding-bottom: 120px;">
             <div class="container">
                 <div class="contact-box card">
                     <div class="form-gradient-bar"></div>
                     <div class="grid-2 align-start">
-                        <!-- // left side : contact info -->
                         <div class="contact-info-col">
                             <div class="tag font-mono">CONTACTEZ-NOUS</div>
                             <h2 class="title-medium">Une question ? Un projet</h2>
@@ -202,7 +208,6 @@
                             </div>
                         </div>
                         
-                        <!-- // right side : form -->
                         <div class="contact-form-col">
                             <form onsubmit="event.preventDefault();">
                                 <div class="form-group">
@@ -226,14 +231,12 @@
 
     </main>
 
-    <!-- // large modern footer -->
     <footer class="site-footer">
         <div class="footer-decor">
             <span class="footer-huge-logo font-mono">&lt;A/&gt;</span>
         </div>
         <div class="footer-container">
             <div class="footer-grid">
-                <!-- // brand and contact col -->
                 <div class="footer-brand">
                     <div class="footer-logo font-mono">&lt;AZER TY/&gt;</div>
                     <div class="footer-contact">
@@ -244,12 +247,10 @@
                         <a href="#"><i class="fa-solid fa-earth-europe"></i></a>
                         <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="#"><i class="fa-brands fa-github"></i></a>
-                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
 
-                <!-- // addresses col -->
                 <div class="footer-addresses">
                     <h3 class="footer-heading">Nos Adresses</h3>
                     
@@ -269,34 +270,26 @@
                     </div>
                 </div>
 
-                <!-- // links col -->
                 <div class="footer-nav">
                     <h3 class="footer-heading">Nous Découvrir</h3>
                     <ul class="footer-links">
-                        <li><a href="home.html">Accueil</a></li>
-                        <li><a href="about.html">A propos</a></li>
-                        <li><a href="realisations.html">Réalisations</a></li>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about.html">Qui sommes nous</a></li>
                         <li><a href="technologies.html">Technologies</a></li>
+                        <li><a href="realisations.html">Réalisations</a></li>
                         <li><a href="recrutement.html">Recrutement</a></li>
                         <li><a href="collaborons.html">Collaborons</a></li>
                         <li><a href="mentions.html">Mentions légales</a></li>
+                        <li><a href="glossaire.html">Glossaire</a></li> 
                     </ul>
                 </div>
             </div>
 
-            <!-- // copyright -->
             <div class="footer-bottom font-mono">
                 <p>&copy; 2026 AZER TY SAS. All systems operational.</p>
             </div>
         </div>
     </footer>
 
-    <!-- // javascript external files -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
-    <script src="Animations/loader.js"></script>
-    <script src="Animations/particules.js"></script>
-    <script src="Animations/scroll.js"></script>
-    <script src="Animations/tilt.js"></script>
 </body>
 </html>

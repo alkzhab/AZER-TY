@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZER TY — MyBrickStore</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Inter:wght@300;400;600;800&family=Syne:wght@600;700;800&display=swap">
+
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/projet.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <script src="JS/header.js" defer></script>
+    <script src="JS/particules.js" defer></script>
+    <script src="JS/scroll.js" defer></script>
+    <script src="JS/toggle.js" defer></script>
+</head>
+
+<body>
+    <header id="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <img src="Images/logo.png" alt="AZER TY — Web Solutions">
+            </a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="about.html">Qui sommes-nous</a></li>
+                    <li><a href="technologies.html">Technologies</a></li>
+                    <li><a href="realisations.html" class="active">Réalisations</a></li>
+                    <li><a href="recrutement.html">Recrutement</a></li>
+                    <li><a href="glossaire.html">Glossaire</a></li>
+                </ul>
+            </nav>
+            <div class="nav-cta">
+                <a href="collaborons.html" class="btn-contact">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    Contactez-nous
+                </a>
+            </div>
+            <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobile-menu" role="navigation">
+            <a href="about.html">Qui sommes-nous</a>
+            <a href="technologies.html">Technologies</a>
+            <a href="realisations.html">Réalisations</a>
+            <a href="recrutement.html">Recrutement</a>
+            <a href="glossaire.html">Glossaire</a>
+            <div class="mobile-cta"><a href="collaborons.html">Contactez-nous</a></div>
+        </div>
+    </header>
+
+    <div id="particles-js"></div>
+    <div class="bg-grid"></div>
+
+    <main class="project-wrapper">
+
+        <section class="proj-hero">
+            <div class="proj-hero-inner">
+
+                <div class="proj-hero-left reveal">
+                    <div class="proj-breadcrumb">
+                        <a href="index.html">Accueil</a>
+                        <span>/</span>
+                        <a href="realisations.html">Réalisations</a>
+                        <span>/</span>
+                        MyBrickStore
+                    </div>
+
+                    <div class="proj-tags-row">
+                        <span class="proj-tag proj-tag--web">Plateforme web</span>
+                        <span class="proj-tag proj-tag--ecom">E-commerce</span>
+                        <span class="proj-tag proj-tag--year">2025-2026</span>
+                    </div>
+
+                    <h1 class="proj-hero-title">
+                        <img src="Images/mybrickstore-logo.png" alt="MyBrickStore">
+                    </h1>
+                    <p class="proj-hero-subtitle">Plateforme e-commerce innovante dédiée à la conception et à la vente de mosaïques personnalisées en briques.</p>
+
+                    <div class="proj-hero-meta">
+                        <div class="proj-meta-item">
+                            <span class="proj-meta-label">Client</span>
+                            <span class="proj-meta-value">Olivier Champalle</span>
+                        </div>
+                        <div class="proj-meta-item">
+                            <span class="proj-meta-label">Durée</span>
+                            <span class="proj-meta-value">6 mois</span>
+                        </div>
+                        <div class="proj-meta-item">
+                            <span class="proj-meta-label">Domaine</span>
+                            <span class="proj-meta-value">E-commerce</span>
+                        </div>
+                        <div class="proj-meta-item">
+                            <span class="proj-meta-label">Statut</span>
+                            <span class="proj-meta-value" style="color:var(--green)">✓ Livré</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proj-hero-right reveal delay-100">
+                    <div class="proj-hero-img-wrap">
+                        <img src="Images/mybrickstore-ordi.png" alt="MyBrickStore — Plateforme e-commerce" onerror="this.style.background='linear-gradient(135deg,#e8f9fb,#edfaf3)';this.style.minHeight='380px'">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="proj-stats reveal">
+            <div class="proj-stats-inner">
+                <div class="proj-stat-item">
+                    <div class="proj-stat-num"><span>6</span></div>
+                    <div class="proj-stat-label">Langages utilisés</div>
+                </div>
+                <div class="proj-stat-item">
+                    <div class="proj-stat-num"><span>4</span></div>
+                    <div class="proj-stat-label">Algorithmes de pavages</div>
+                </div>
+                <div class="proj-stat-item">
+                    <div class="proj-stat-num"><span>4</span></div>
+                    <div class="proj-stat-label">Experts mobilisés</div>
+                </div>
+                <div class="proj-stat-item">
+                    <div class="proj-stat-num"><span>6</span></div>
+                    <div class="proj-stat-label">Mois de développement</div>
+                </div>
+            </div>
+        </div>
+
+        <section class="proj-section reveal">
+            <div class="proj-container">
+                <div class="proj-context-grid">
+                    <div class="proj-context-text">
+                        <div class="proj-section-eyebrow">Contexte & Challenge</div>
+                        <h2 class="proj-section-title">Un projet technique<br>à multiples défis</h2>
+
+                        <p>MyBrickStore est né d'une ambition claire : permettre à n'importe qui de transformer une photo personnelle en mosaïque de briques, commandable en ligne et livrée chez soi. Ce qui paraît simple en surface cache une chaîne technique d'une grande complexité.</p>
+
+                        <p>La première contrainte était de taille : traiter une image numérique quelconque et la convertir automatiquement en un plan de mosaïque composé uniquement des couleurs disponibles dans le catalogue. Cela implique une réduction de couleurs, une pixelisation et un algorithme de correspondance optimisé.</p>
+
+                        <div class="proj-context-extra" id="ctx-extra">
+                            <p>En parallèle, la plateforme devait gérer un catalogue de produits dynamique avec des variations selon le format choisi (32x32, 48x48, 64x64, 128x128 briques), calculer en temps réel le prix en fonction des quantités et types de briques nécessaires, et déclencher automatiquement une commande usine une fois l'achat validé.</p>
+
+                            <p>L'architecture MVC entièrement personnalisée — sans framework tiers — représentait un défi de conception supplémentaire. Chaque couche (routeur, contrôleurs, modèles, vues) a été construite from scratch, avec une attention particulière portée à la séparation des responsabilités et à la testabilité du code.</p>
+
+                            <p>Enfin, la sécurité du tunnel d'achat, la gestion des sessions, la protection contre les injections SQL et la conformité RGPD constituaient des exigences non-négociables intégrées dès la conception.</p>
+
+                            <div class="proj-challenges">
+                                <span class="proj-challenge-chip"><i class="fa-solid fa-microchip"></i> Algorithme de pavages</span>
+                                <span class="proj-challenge-chip"><i class="fa-solid fa-cart-shopping"></i> Tunnel d'achat sécurisé</span>
+                                <span class="proj-challenge-chip"><i class="fa-solid fa-warehouse"></i> Gestion des stocks temps réel</span>
+                                <span class="proj-challenge-chip"><i class="fa-solid fa-code"></i> MVC from scratch</span>
+                                <span class="proj-challenge-chip"><i class="fa-solid fa-shield-halved"></i> Sécurité & RGPD</span>
+                            </div>
+                        </div>
+
+                        <button class="proj-toggle-btn" id="ctx-toggle" onclick="toggleContext()">
+                            <span id="ctx-toggle-label">Voir plus</span>
+                            <i class="fa-solid fa-chevron-down" id="ctx-chevron"></i>
+                        </button>
+                    </div>
+
+                    <div class="proj-context-img">
+                        <div class="proj-context-img-decor"></div>
+                        <img src="Images/MyBrickStore-Crop.png" alt="Interface MyBrickStore" onerror="this.style.background='linear-gradient(135deg,#e8f9fb,#edfaf3)';this.style.minHeight='360px';this.style.display='block'">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="proj-section proj-accomp reveal">
+            <div class="proj-container">
+                <div style="text-align:center; max-width: 600px; margin: 0 auto;">
+                    <div class="proj-section-eyebrow">Notre rôle</div>
+                    <h2 class="proj-section-title">L'accompagnement AZER TY</h2>
+                    <p style="color:var(--text);font-size:0.95rem;line-height:1.7;margin-top:0.5rem;">De la première réflexion jusqu'au déploiement en ligne, notre équipe a pris en charge chaque dimension du projet.</p>
+                </div>
+
+                <div class="proj-accomp-grid">
+
+                    <div class="proj-accomp-card">
+                        <div class="proj-accomp-num">01 — CONCEPTION</div>
+                        <div class="proj-accomp-icon c1"><i class="fa-solid fa-lightbulb"></i></div>
+                        <div class="proj-accomp-title">Conception & Architecture</div>
+                        <div class="proj-accomp-desc">Définition des user stories, modélisation de la base de données (MCD/MLD), architecture MVC personnalisée et plan technique complet avant d'écrire la première ligne de code.</div>
+                    </div>
+
+                    <div class="proj-accomp-card">
+                        <div class="proj-accomp-num">02 — DESIGN</div>
+                        <div class="proj-accomp-icon c2"><i class="fa-solid fa-pen-ruler"></i></div>
+                        <div class="proj-accomp-title">Design UI/UX</div>
+                        <div class="proj-accomp-desc">Maquettes haute fidélité sur Figma, charte graphique cohérente, prototypes interactifs validés avant développement. Interface pensée pour la conversion et l'expérience utilisateur optimale.</div>
+                    </div>
+
+                    <div class="proj-accomp-card">
+                        <div class="proj-accomp-num">03 — ALGORITHMES</div>
+                        <div class="proj-accomp-icon c3"><i class="fa-solid fa-code-branch"></i></div>
+                        <div class="proj-accomp-title">Algorithmes sur-mesure</div>
+                        <div class="proj-accomp-desc">Développement en C et Java d'algorithmes propriétaires : redimensionnement d'image, 4 différents algorithmes de pavages, pixelisation d'image, gestion des stocks et génération automatique des bons de commande usine.</div>
+                    </div>
+
+                    <div class="proj-accomp-card">
+                        <div class="proj-accomp-num">04 — DÉVELOPPEMENT</div>
+                        <div class="proj-accomp-icon c4"><i class="fa-solid fa-terminal"></i></div>
+                        <div class="proj-accomp-title">Développement full-stack</div>
+                        <div class="proj-accomp-desc">Développement complet du back-end PHP (MVC from scratch), du front-end HTML/CSS/JS, de l'interface d'administration, du tunnel d'achat sécurisé et de l'API de gestion des stocks.</div>
+                    </div>
+
+                    <div class="proj-accomp-card">
+                        <div class="proj-accomp-num">05 — HÉBERGEMENT</div>
+                        <div class="proj-accomp-icon c5"><i class="fa-solid fa-server"></i></div>
+                        <div class="proj-accomp-title">Hébergement & Infrastructure</div>
+                        <div class="proj-accomp-desc">Configuration du serveur web, mise en place de la base de données MySQL en production, configuration HTTPS, sécurisation des accès et optimisation des performances serveur.</div>
+                    </div>
+
+                    <div class="proj-accomp-card">
+                        <div class="proj-accomp-num">06 — DÉPLOIEMENT</div>
+                        <div class="proj-accomp-icon c6"><i class="fa-solid fa-rocket"></i></div>
+                        <div class="proj-accomp-title">Déploiement & Mise en ligne</div>
+                        <div class="proj-accomp-desc">Déploiement continu, tests de recette, migration des données, monitoring post-lancement. Livraison d'une plateforme stable et performante, prête pour une montée en charge progressive.</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="proj-section proj-features reveal">
+            <div class="proj-container">
+                <div style="text-align:center; max-width:600px; margin: 0 auto;">
+                    <div class="proj-section-eyebrow">Ce que ça fait</div>
+                    <h2 class="proj-section-title">Fonctionnalités clés</h2>
+                </div>
+
+                <div class="proj-features-grid">
+                    <div class="proj-feature-item">
+                        <div class="proj-feature-icon"><i class="fa-solid fa-image"></i></div>
+                        <div class="proj-feature-title">Upload & pixelisation</div>
+                        <div class="proj-feature-desc">L'utilisateur importe sa photo et choisit la taille du tableau de briques </div>
+                    </div>
+                    <div class="proj-feature-item">
+                        <div class="proj-feature-icon"><i class="fa-solid fa-table-cells"></i></div>
+                        <div class="proj-feature-title">Génération des mosaïques</div>
+                        <div class="proj-feature-desc">
+                            4 modes de pavage au choix selon le rendu souhaité et le budget :
+                            <ul style="margin-top:0.6rem; padding-left:1rem; display:flex; flex-direction:column; gap:0.3rem;">
+                                <li><strong style="color:var(--cyan)">Économique</strong> — rendu simplifié, moins de couleurs, coût réduit</li>
+                                <li><strong style="color:var(--green)">Standard</strong> — équilibre qualité / prix, idéal pour la plupart des projets</li>
+                                <li><strong style="color:var(--gold)">Express</strong> — fidélité élevée, délai de production accéléré</li>
+                                <li><strong style="color:#c2410c">Expert</strong> — rendu maximal, palette complète, qualité premium</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="proj-feature-item">
+                        <div class="proj-feature-icon"><i class="fa-solid fa-cart-plus"></i></div>
+                        <div class="proj-feature-title">Tunnel d'achat sécurisé</div>
+                        <div class="proj-feature-desc">Panier, calcul de prix dynamique selon les briques nécessaires, paiement sécurisé et confirmation de commande.</div>
+                    </div>
+                    <div class="proj-feature-item">
+                        <div class="proj-feature-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+                        <div class="proj-feature-title">Gestion des stocks live</div>
+                        <div class="proj-feature-desc">Suivi en temps réel des stocks par couleur et type de brique, alertes de rupture et réapprovisionnement automatique.</div>
+                    </div>
+                    <div class="proj-feature-item">
+                        <div class="proj-feature-icon"><i class="fa-solid fa-industry"></i></div>
+                        <div class="proj-feature-title">Commande usine auto</div>
+                        <div class="proj-feature-desc">À chaque achat validé, un bon de commande est généré automatiquement pour la production avec la liste exacte des briques.</div>
+                    </div>
+                    <div class="proj-feature-item">
+                        <div class="proj-feature-icon"><i class="fa-solid fa-gauge-high"></i></div>
+                        <div class="proj-feature-title">Interface admin complète</div>
+                        <div class="proj-feature-desc">Dashboard de pilotage commercial : commandes, clients, stocks, statistiques de ventes et gestion du catalogue.</div>
+                    </div>
+                    <div class="proj-feature-item">
+                        <div class="proj-feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div class="proj-feature-title">Sécurité renforcée</div>
+                        <div class="proj-feature-desc">Protection anti-injection SQL, sessions sécurisées, CSRF tokens, HTTPS et conformité RGPD sur les données utilisateurs.</div>
+                    </div>
+                    <div class="proj-feature-item">
+                        <div class="proj-feature-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                        <div class="proj-feature-title">100% responsive</div>
+                        <div class="proj-feature-desc">Interface optimisée pour mobile, tablette et desktop. Expérience fluide sur tous les supports pour maximiser les conversions.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="proj-section reveal">
+            <div class="proj-container">
+                <div class="proj-section-eyebrow">Stack technique</div>
+                <h2 class="proj-section-title">Choix technologiques</h2>
+                <p style="color:var(--text);font-size:0.95rem;line-height:1.7;max-width:580px;margin-top:0.5rem;">Chaque technologie a été choisie pour ses qualités intrinsèques et son adéquation au problème à résoudre.</p>
+
+                <div class="proj-tech-grid">
+
+                    <div class="proj-tech-card">
+                        <div class="proj-tech-header">
+                            <div class="proj-tech-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
+                            </div>
+                            <div>
+                                <div class="proj-tech-name">PHP (MVC)</div>
+                                <div class="proj-tech-role">Langage back-end principal</div>
+                            </div>
+                        </div>
+                        <div class="proj-tech-desc">Architecture MVC conçue entièrement sur mesure sans framework tiers. Chaque composant (routeur, contrôleur, modèle, vue) a été développé from scratch pour un contrôle total et des performances optimisées.</div>
+                        <div class="proj-tech-tags">
+                            <span class="proj-tech-tag">Routeur</span>
+                            <span class="proj-tech-tag">Modèle</span>
+                            <span class="proj-tech-tag">Vue</span>
+                            <span class="proj-tech-tag">Controlleur</span>
+                        </div>
+                    </div>
+
+                    <div class="proj-tech-card">
+                        <div class="proj-tech-header">
+                            <div class="proj-tech-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+                            </div>
+                            <div>
+                                <div class="proj-tech-name">MySQL</div>
+                                <div class="proj-tech-role">Base de données relationnelle</div>
+                            </div>
+                        </div>
+                        <div class="proj-tech-desc">Gestion des produits, commandes, utilisateurs, stocks et historiques. Schéma normalisé avec contraintes d'intégrité, index optimisés et transactions pour garantir la cohérence des données lors des achats.</div>
+                        <div class="proj-tech-tags">
+                            <span class="proj-tech-tag">Tables</span>
+                            <span class="proj-tech-tag">Vues</span>
+                            <span class="proj-tech-tag">Trigger</span>
+                            <span class="proj-tech-tag">Procédures stockées</span>
+                        </div>
+                    </div>
+
+                    <div class="proj-tech-card">
+                        <div class="proj-tech-header">
+                            <div class="proj-tech-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                            </div>
+                            <div>
+                                <div class="proj-tech-name">HTML5 / CSS3</div>
+                                <div class="proj-tech-role">Structure & mise en forme</div>
+                            </div>
+                        </div>
+                        <div class="proj-tech-desc">Balisage sémantique pour le SEO et l'accessibilité. CSS3 avec variables, Flexbox et Grid pour un design responsive pixel-perfect. Animations CSS pour les interactions utilisateur sans dépendance JS externe.</div>
+                        <div class="proj-tech-tags">
+                            <span class="proj-tech-tag">Responsive</span>
+                            <span class="proj-tech-tag">CSS Grid</span>
+                        </div>
+                    </div>
+
+                    <div class="proj-tech-card">
+                        <div class="proj-tech-header">
+                            <div class="proj-tech-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                            </div>
+                            <div>
+                                <div class="proj-tech-name">JavaScript</div>
+                                <div class="proj-tech-role">Interactivité front-end</div>
+                            </div>
+                        </div>
+                        <div class="proj-tech-desc">Gestion des interactions dynamiques : prévisualisation temps réel de la mosaïque, mise à jour du panier sans rechargement, validation des formulaires côté client et appels AJAX vers l'API back-end.</div>
+                        <div class="proj-tech-tags">
+                            <span class="proj-tech-tag">Animation</span>
+                            <span class="proj-tech-tag">DOM</span>
+                            <span class="proj-tech-tag">Canvas API</span>
+                        </div>
+                    </div>
+
+                    <div class="proj-tech-card">
+                        <div class="proj-tech-header">
+                            <div class="proj-tech-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                            </div>
+                            <div>
+                                <div class="proj-tech-name">Java</div>
+                                <div class="proj-tech-role">Traitement d'images & usine</div>
+                            </div>
+                        </div>
+                        <div class="proj-tech-desc">Trois modules Java critiques : redimensionnement d'image, pixelisation d'image, et génération automatique des bons de commande usine au format structuré.</div>
+                        <div class="proj-tech-tags">
+                            <span class="proj-tech-tag">Redimension</span>
+                            <span class="proj-tech-tag">Pixelisation</span>
+                            <span class="proj-tech-tag">Génération</span>
+                        </div>
+                    </div>
+
+                    <div class="proj-tech-card">
+                        <div class="proj-tech-header">
+                            <div class="proj-tech-logo">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C">
+                            </div>
+                            <div>
+                                <div class="proj-tech-name">C</div>
+                                <div class="proj-tech-role">Algorithme de pavage</div>
+                            </div>
+                        </div>
+                        <div class="proj-tech-desc">Algorithme bas niveau de pavage d'image optimisé en C pour des performances maximales. Utilisé pour générer les 4 modes de pavage (Économique, Standard, Express, Expert) — chaque mode appliquant une stratégie différente de correspondance et de réduction des couleurs. Traitement des grandes résolutions (96×96 = 9 216 briques) en quelques millisecondes grâce à la manipulation directe de la mémoire et l'optimisation des boucles.</div>
+                        <div class="proj-tech-tags">
+                            <span class="proj-tech-tag">Économique</span>
+                            <span class="proj-tech-tag">Standard</span>
+                            <span class="proj-tech-tag">Express</span>
+                            <span class="proj-tech-tag">Expert</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="proj-section reveal" style="background: linear-gradient(180deg,#f8fbfc,#fff);">
+            <div class="proj-container">
+                <div style="text-align:center; max-width:600px; margin: 0 auto 1rem;">
+                    <div class="proj-section-eyebrow">L'équipe projet</div>
+                    <h2 class="proj-section-title">Les experts missionnés</h2>
+                    <p style="color:var(--text);font-size:0.95rem;line-height:1.7;margin-top:0.5rem;">Quatre membres d'AZER TY ont collaboré sur ce projet, chacun apportant son expertise spécifique.</p>
+                </div>
+
+                <div class="proj-team-grid">
+
+                    <div class="proj-team-member">
+                        <div class="proj-team-img-wrap">
+                            <img src="Images/Amine.png" alt="Amine" onerror="this.src='Images/logo.png'">
+                        </div>
+                        <div class="proj-team-name">Amine</div>
+                        <div class="proj-team-role">CEO & Cofondateur</div>
+                        <div class="proj-team-contrib">Back-end PHP & Base de données</div>
+                        <a href="https://www.linkedin.com/in/amine-aissyne-37b1ab307/" target="_blank" class="proj-team-linkedin"><i class="fab fa-linkedin"></i></a>
+                    </div>
+
+                    <div class="proj-team-member">
+                        <div class="proj-team-img-wrap">
+                            <img src="Images/Zhabrail.png" alt="Zhabrail" onerror="this.src='Images/logo.png'">
+                        </div>
+                        <div class="proj-team-name">Zhabrail</div>
+                        <div class="proj-team-role">CTO & Cofondateur</div>
+                        <div class="proj-team-contrib">Front-end & Design UI</div>
+                        <a href="https://www.linkedin.com/in/zhabrail-alkhastov/" target="_blank" class="proj-team-linkedin"><i class="fab fa-linkedin"></i></a>
+                    </div>
+
+                    <div class="proj-team-member">
+                        <div class="proj-team-img-wrap">
+                            <img src="Images/Ethan.png" alt="Ethan" onerror="this.src='Images/logo.png'">
+                        </div>
+                        <div class="proj-team-name">Ethan</div>
+                        <div class="proj-team-role">Développeur</div>
+                        <div class="proj-team-contrib">Algorithme & Front-end</div>
+                        <a href="https://www.linkedin.com/in/ethan-polin/" target="_blank" class="proj-team-linkedin"><i class="fab fa-linkedin"></i></a>
+                    </div>
+
+                    <div class="proj-team-member">
+                        <div class="proj-team-img-wrap">
+                            <img src="Images/Rayan.png" alt="Rayan" onerror="this.src='Images/logo.png'">
+                        </div>
+                        <div class="proj-team-name">Rayan</div>
+                        <div class="proj-team-role">Développeur</div>
+                        <div class="proj-team-contrib">Back-end & Algorithme</div>
+                        <a href="https://www.linkedin.com/in/rayan-essaidi/" target="_blank" class="proj-team-linkedin"><i class="fab fa-linkedin"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="proj-cta">
+            <div class="proj-cta-inner">
+                <h2>Un projet similaire<br>en tête ?</h2>
+                <p>E-commerce, traitement d'images, algorithmes complexes — notre équipe a la maîtrise technique pour réaliser vos ambitions les plus exigeantes.</p>
+                <div class="proj-cta-actions">
+                    <a href="collaborons.html" class="proj-cta-btn proj-cta-btn--white">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        Démarrer un projet
+                    </a>
+                    <a href="realisations.html" class="proj-cta-btn proj-cta-btn--ghost">
+                        Voir nos autres réalisations
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-decor">
+            <span class="footer-huge-logo font-mono">&lt;A/&gt;</span>
+        </div>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo font-mono">&lt;AZER TY/&gt;</div>
+                    <div class="footer-contact">
+                        <p class="font-mono">+33 1 02 03 04 05</p>
+                        <p class="font-mono">contact@azerty-solutions.fr</p>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#"><i class="fa-solid fa-earth-europe"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-addresses">
+                    <h3 class="footer-heading">Nos Adresses</h3>
+                    <div class="footer-address-block">
+                        <h4>Marne-la-Vallée (HQ)</h4>
+                        <p>IUT de Marne-la-Vallée<br>2 Rue Albert Einstein<br>77420 Champs-sur-Marne</p>
+                    </div>
+                    <div class="footer-address-block">
+                        <h4>Paris</h4>
+                        <p>10 Allée Lydia Becker<br>75018 Paris - FRANCE</p>
+                    </div>
+                    <div class="footer-address-block">
+                        <h4>Lyon</h4>
+                        <p>Immeuble LE PRESIDENT<br>40/42 Av. Georges Pompidou<br>69003 Lyon - FRANCE</p>
+                    </div>
+                </div>
+                <div class="footer-nav">
+                    <h3 class="footer-heading">Nous Découvrir</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about.html">Qui sommes-nous</a></li>
+                        <li><a href="technologies.html">Technologies</a></li>
+                        <li><a href="realisations.html">Réalisations</a></li>
+                        <li><a href="recrutement.html">Recrutement</a></li>
+                        <li><a href="collaborons.html">Collaborons</a></li>
+                        <li><a href="glossaire.html">Glossaire</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom font-mono">
+                <p>&copy; 2026 AZER TY SAS. All systems operational.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

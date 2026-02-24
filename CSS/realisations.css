@@ -1,9 +1,7 @@
-/* // variables d'inclinaison */
 :root {
     --slant: 5vw;
 }
 
-/* // conteneur principal sans fond solide */
 .realisations-wrapper {
     padding-top: var(--nav-height);
     position: relative;
@@ -11,38 +9,32 @@
     overflow: hidden; 
 }
 
-/* // base pour chaque section en zigzag */
 .zigzag-section {
     padding: calc(4rem + var(--slant)) 0;
     position: relative;
 }
 
-/* // style fond blanc pur pour titre et transition */
 .bg-glass-1 {
     background: #ffffff;
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
 }
 
-/* // style degrade de marque pour les sections projets */
 .bg-glass-2 {
     background: linear-gradient(135deg, var(--green), var(--blue), var(--yellow));
     background-size: 200% 200%;
     animation: gradientFlow 10s ease infinite;
 }
 
-/* // utilitaires de texte blanc pour les sections degradees */
 .text-white {
     color: #ffffff !important;
 }
 
-/* // utilitaire pour forcer l'empilement au-dessus de la grille */
 .relative-z {
     position: relative;
     z-index: 1;
 }
 
-/* // bouton specifique pour fond fonce/degrade */
 .btn-outline-white {
     display: inline-block;
     padding: 0.5rem 1.25rem;
@@ -60,7 +52,6 @@
     color: var(--blue);
 }
 
-/* // superposition de grille locale technique */
 .section-grid-overlay {
     position: absolute;
     inset: 0;
@@ -72,7 +63,6 @@
     background-size: 40px 40px;
 }
 
-/* // decoupes polygonales dynamiques */
 .slant-1 {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - var(--slant)));
     padding-top: 6rem;
@@ -94,7 +84,6 @@
     padding-bottom: 6rem;
 }
 
-/* // disposition et alignement des projets */
 .project-row {
     position: relative;
     z-index: 2;
@@ -112,7 +101,6 @@
     color: #ffffff;
 }
 
-/* // carte projet avec taille fixe et cadre soigne */
 .project-card {
     width: 100%;
     max-width: 500px;
@@ -146,7 +134,6 @@
     border-color: white;
 }
 
-/* // ajustements pour la reactivite mobile */
 @media (max-width: 768px) {
     .project-row {
         grid-template-columns: 1fr;

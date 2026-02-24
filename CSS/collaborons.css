@@ -1,6 +1,3 @@
-/* // collaborons specific styles */
-
-/* // utility classes for spacing to keep html clean */
 .pt-section {
     padding-top: calc(var(--nav-height) + 60px);
     padding-bottom: 60px;
@@ -27,7 +24,6 @@
     align-items: center;
 }
 
-/* // form container */
 .contact-form {
     width: 100%;
     position: relative;
@@ -56,7 +52,6 @@
     color: #a0aec0;
 }
 
-/* // project type multi-select buttons */
 .project-types-flex {
     display: flex;
     flex-wrap: wrap;
@@ -97,7 +92,6 @@
     box-shadow: 0 0 0 1px var(--blue);
 }
 
-/* // file upload wrapper */
 .file-upload-wrapper {
     display: flex;
     align-items: center;
@@ -139,7 +133,6 @@
     flex-grow: 1;
 }
 
-/* // client logos grid */
 .client-logos-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -165,7 +158,6 @@
     font-size: 1.5rem;
 }
 
-/* // responsive adjustments */
 @media (max-width: 768px) {
     .client-logos-grid {
         grid-template-columns: repeat(2, 1fr);

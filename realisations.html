@@ -1,57 +1,76 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <!-- // meta tags and title -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AZER TY - Réalisations</title>
     
-    <!-- // google fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    
-    <!-- // font awesome -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;600;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- // custom css files -->
+    <link rel="stylesheet" href="CSS/header.css">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/realisations.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+
+    <script src="JS/header.js" defer></script>
+    <script src="JS/particules.js" defer></script>
+    <script src="JS/scroll.js" defer></script>
+    <script src="JS/tilt.js" defer></script>
 </head>
 <body>
-    <!-- // page loader -->
-    <div id="loader">
-        <div class="text-center">
-            <span class="font-mono" style="font-size: 1.5rem; font-weight: bold; color: var(--heading); letter-spacing: 2px;">&lt;AZER TY/&gt;</span>
-            <div class="loader-bar"><div class="loader-progress"></div></div>
+    <header id="site-header">
+        <div class="header-inner">
+
+            <a href="index.html" class="logo">
+                <img src="Images/logo.png" alt="AZER TY — Web Solutions">
+            </a>
+
+            <nav>
+            <ul class="nav-list">
+                <li><a href="about.html">Qui sommes-nous</a></li>
+                <li><a href="technologies.html">Technologies</a></li>
+                <li><a href="realisations.html" class="active">Réalisations</a></li>
+                <li><a href="recrutement.html">Recrutement</a></li>
+                <li><a href="glossaire.html">Glossaire</a></li>
+            </ul>
+            </nav>
+
+            <div class="nav-cta">
+            <a href="collaborons.html" class="btn-contact">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+                Contactez-nous
+            </a>
+            </div>
+
+            <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+            </button>
+
         </div>
-    </div>
+
+        <div class="mobile-menu" id="mobile-menu" role="navigation">
+            <a href="about.html">Qui sommes-nous</a>
+            <a href="technologies.html">Technologies</a>
+            <a href="realisations.html">Réalisations</a>
+            <a href="recrutement.html">Recrutement</a>
+            <a href="glossaire.html">Glossaire</a>
+            <div class="mobile-cta"><a href="collaborons.html">Contactez-nous</a></div>
+        </div>
+    </header>
     
-    <!-- // backgrounds (particles and grid will show through the glassmorphism) -->
     <div id="particles-js"></div>
     <div class="bg-grid"></div>
 
- <!-- // main navigation header -->
-    <nav class="navbar">
-        <div class="container">
-            <!-- // logo section -->
-            <a href="home.html" class="nav-logo">
-                <img src="Images/logo.png" alt="AZER TY Logo">
-            </a>
-            
-            <!-- // navigation links -->
-            <div class="nav-links">
-                <a href="home.html" class="nav-link active">Accueil</a>
-                <a href="about.html" class="nav-link">A propos</a>
-                <a href="technologies.html" class="nav-link">Technologies</a>
-                <a href="realisations.html" class="nav-link">Réalisations</a>
-                <a href="recrutement.html" class="nav-link">Recrutement</a>
-                <a href="collaborons.html" class="btn btn-primary btn-nav">Collaborons</a>
-            </div>
-        </div>
-    </nav>
 
     <div class="realisations-wrapper">
         
-        <!-- // section 1 : main title (glassmorphism style 1) -->
         <div class="zigzag-section bg-glass-1 slant-1 reveal">
             <div class="container text-center">
                 <div class="tag font-mono"><span class="pulse-dot"></span>Portfolio</div>
@@ -59,18 +78,17 @@
             </div>
         </div>
 
-        <!-- // section 2 : first project (glassmorphism style 2) -->
         <div class="zigzag-section bg-glass-2 slant-2 reveal delay-100">
             <div class="project-row">
                 <div class="project-text">
                     <h2 class="title-medium">Résumé projet</h2>
                     <p class="text-white" style="margin-bottom: 1.5rem; opacity: 0.9;">
-                        MyBrixStore est une plateforme E-commerce innovante dédiée à la création de mosaïques en briques. 
+                        MyBrickStore est une plateforme E-commerce innovante dédiée à la création de mosaïques en briques. 
                         Développée sous une architecture MVC personnalisée, elle intègre des algorithmes de traitement d'images, 
                         une gestion dynamique des stocks en temps réel et un tunnel d'achat sécurisé, offrant une expérience 
                         utilisateur fluide et une interface d'administration complète pour le pilotage commercial.
                     </p>
-                    <a href="#" class="btn btn-outline btn-small">Voir le projet</a>
+                    <a href="projet.html" class="btn btn-outline btn-small">Voir le projet</a>
                 </div>
                 <div class="project-card tilt-card">
                     <img src="Images/mybrickstore.png">
@@ -97,7 +115,7 @@
                 </div>
                 <div class="project-text">
                     <h2 class="title-medium">Résumé projet</h2>
-                    <p style="margin-bottom: 1.5rem;">Prolongement ambitieux de notre plateforme, <strong>MyBrixGames</strong> est une application mobile Android permettant à plusieurs utilisateurs de jouer ensemble en temps réel (Tetris-like coloré et pavage Lego). Elle repose sur une architecture de pointe combinant un serveur de jeu robuste sous NodeJS / React et une gestion des données ultra-rapide via une base NoSQL (MongoDB).</p>
+                    <p style="margin-bottom: 1.5rem;">Prolongement ambitieux de notre plateforme, <strong>MyBrixkGames</strong> est une application mobile Android permettant à plusieurs utilisateurs de jouer ensemble en temps réel (Tetris-like coloré et pavage Lego). Elle repose sur une architecture de pointe combinant un serveur de jeu robuste sous NodeJS / React et une gestion des données ultra-rapide via une base NoSQL (MongoDB).</p>
                     <a href="#" class="btn btn-outline btn-small">Voir le projet</a>
                 </div>
             </div>
@@ -105,14 +123,12 @@
 
     </div>
 
-    <!-- // large modern footer -->
     <footer class="site-footer">
         <div class="footer-decor">
             <span class="footer-huge-logo font-mono">&lt;A/&gt;</span>
         </div>
         <div class="footer-container">
             <div class="footer-grid">
-                <!-- // brand and contact col -->
                 <div class="footer-brand">
                     <div class="footer-logo font-mono">&lt;AZER TY/&gt;</div>
                     <div class="footer-contact">
@@ -123,7 +139,6 @@
                         <a href="#"><i class="fa-solid fa-earth-europe"></i></a>
                         <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="#"><i class="fa-brands fa-github"></i></a>
-                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
@@ -147,34 +162,26 @@
                     </div>
                 </div>
 
-                <!-- // links col -->
                 <div class="footer-nav">
                     <h3 class="footer-heading">Nous Découvrir</h3>
                     <ul class="footer-links">
-                        <li><a href="home.html">Accueil</a></li>
-                        <li><a href="about.html">A propos</a></li>
-                        <li><a href="realisations.html">Réalisations</a></li>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about.html">Qui sommes nous</a></li>
                         <li><a href="technologies.html">Technologies</a></li>
+                        <li><a href="realisations.html">Réalisations</a></li>
                         <li><a href="recrutement.html">Recrutement</a></li>
                         <li><a href="collaborons.html">Collaborons</a></li>
                         <li><a href="mentions.html">Mentions légales</a></li>
+                        <li><a href="glossaire.html">Glossaire</a></li> 
                     </ul>
                 </div>
             </div>
 
-            <!-- // copyright -->
             <div class="footer-bottom font-mono">
                 <p>&copy; 2026 AZER TY SAS. All systems operational.</p>
             </div>
         </div>
     </footer>
-
-    <!-- // javascript animation scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
-    <script src="Animations/loader.js"></script>
-    <script src="Animations/particules.js"></script>
-    <script src="Animations/scroll.js"></script>
-    <script src="Animations/tilt.js"></script>
+    
 </body>
 </html>
