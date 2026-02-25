@@ -44,7 +44,6 @@ function initParticules() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // initialize particles.js for background
     if (typeof particlesJS !== 'undefined') {
         particlesJS("particles-js", {
             "particles": {
