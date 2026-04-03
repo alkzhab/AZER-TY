@@ -1,0 +1,155 @@
+:root {
+    --slant: 5vw;
+}
+
+.realisations-wrapper {
+    padding-top: var(--nav-height);
+    position: relative;
+    z-index: 10;
+    overflow: hidden; 
+}
+
+.zigzag-section {
+    padding: calc(4rem + var(--slant)) 0;
+    position: relative;
+}
+
+.bg-glass-1 {
+    background: #ffffff;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.bg-glass-2 {
+    background: linear-gradient(135deg, var(--green), var(--blue), var(--yellow));
+    background-size: 200% 200%;
+    animation: gradientFlow 10s ease infinite;
+}
+
+.text-white {
+    color: #ffffff !important;
+}
+
+.relative-z {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-outline-white {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+}
+
+.btn-outline-white:hover {
+    background: white;
+    color: var(--blue);
+}
+
+.section-grid-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.4;
+    background-image: linear-gradient(to right, var(--border) 1px, transparent 1px),
+                      linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.slant-1 {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - var(--slant)));
+    padding-top: 6rem;
+}
+
+.slant-2 {
+    margin-top: calc(-1 * var(--slant));
+    clip-path: polygon(0 0, 100% var(--slant), 100% calc(100% - var(--slant)), 0 100%);
+}
+
+.slant-3 {
+    margin-top: calc(-1 * var(--slant));
+    clip-path: polygon(0 var(--slant), 100% 0, 100% 100%, 0 calc(100% - var(--slant)));
+}
+
+.slant-4 {
+    margin-top: calc(-1 * var(--slant));
+    clip-path: polygon(0 0, 100% var(--slant), 100% 100%, 0 100%);
+    padding-bottom: 6rem;
+}
+
+.project-row {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.project-text {
+    text-align: left;
+    color: #ffffff;
+}
+
+.project-card {
+    width: 100%;
+    max-width: 500px;
+    height: 350px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.placeholder-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: white;
+}
+
+@media (max-width: 768px) {
+    .project-row {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .project-card {
+        height: 250px;
+        margin: 0 auto;
+    }
+
+    .project-reverse-mobile .project-text {
+        order: 2;
+    }
+    
+    .project-reverse-mobile .project-card {
+        order: 1;
+    }
+}

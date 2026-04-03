@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — AZER TY Agency</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;600&display=swap">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- // linking styles correctly -->
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/blog.css">
+    <!-- // linking scripts -->
+    <script src="JS/header.js" defer></script>
+    <script src="JS/blog.js" defer></script>
+</head>
+
+<body>
+    <!-- // header section -->
+    <header id="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <img src="Images/logo.png" alt="AZER TY — Web Solutions">
+            </a>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="about.html">Qui sommes-nous</a></li>
+                    <li><a href="technologies.html">Technologies</a></li>
+                    <li><a href="realisations.html">Réalisations</a></li>
+                    <li><a href="recrutement.html">Recrutement</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="glossaire.html">Glossaire</a></li>
+                </ul>
+            </nav>
+            <div class="nav-cta">
+                <a href="collaborons.html" class="btn-contact">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    Contactez-nous
+                </a>
+            </div>
+            <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobile-menu" role="navigation">
+            <a href="about.html">Qui sommes-nous</a>
+            <a href="technologies.html">Technologies</a>
+            <a href="realisations.html">Réalisations</a>
+            <a href="recrutement.html">Recrutement</a>
+            <a href="blog.html">Blog</a>
+            <a href="glossaire.html">Glossaire</a>
+            <div class="mobile-cta"><a href="collaborons.html">Contactez-nous</a></div>
+        </div>
+    </header>
+
+    <!-- // main content area -->
+    <main class="blog-main">
+        <section class="blog-hero">
+            <div class="blog-bg-decor decor-circle-1"></div>
+            <div class="blog-bg-decor decor-circle-2"></div>
+            
+            <div class="blog-container">
+                <span class="blog-eyebrow">Notre vision tech</span>
+                <h1 class="blog-title">Le Blog <em>AZER TY</em></h1>
+                <p class="blog-subtitle">Plongez dans nos articles sur le développement, le design, l'innovation technologique et l'écosystème digital.</p>
+            </div>
+        </section>
+
+        <section class="blog-content">
+            <div class="blog-container">
+                
+                <!-- // blog filters section -->
+                <div class="blog-filters">
+                    <button class="filter-btn active" data-filter="all">Tous les articles</button>
+                    <button class="filter-btn" data-filter="event">Événement</button>
+                    <button class="filter-btn" data-filter="tech">Technologie</button>
+                    <button class="filter-btn" data-filter="ai">IA</button>
+                    <button class="filter-btn" data-filter="general">Général</button>
+                </div>
+
+                <!-- // articles grid -->
+                <div class="blog-grid" id="blog-grid">
+
+                    <!-- // event article -->
+                    <article class="blog-card" data-category="event">
+                        <div class="blog-card-img">
+                            <img src="Images/article-vivatech.png" alt="VivaTech 2026">
+                            <div class="blog-card-tag event-tag">Événement</div>
+                        </div>
+                        <div class="blog-card-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">10 Avr 2026</span>
+                                <span class="blog-dot">•</span>
+                                <span class="blog-author">Par L'Équipe</span>
+                            </div>
+                            <h3 class="blog-card-title">Retrouvez AZER TY à VivaTech 2026 !</h3>
+                            <p class="blog-card-desc">Nous serons présents au plus grand événement startup et tech d'Europe fin mai. Venez échanger avec nos experts sur l'innovation et l'avenir du digital.</p>
+                            <a href="article_vivatech.html" class="blog-card-link">
+                                Lire l'article
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- // technology article -->
+                    <article class="blog-card" data-category="tech">
+                        <div class="blog-card-img">
+                            <img src="Images/webassembly.png" alt="WebAssembly">
+                            <div class="blog-card-tag tech-tag">Technologie</div>
+                        </div>
+                        <div class="blog-card-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">03 Avr 2026</span>
+                                <span class="blog-dot">•</span>
+                                <span class="blog-author">Par Zhabrail</span>
+                            </div>
+                            <h3 class="blog-card-title">WebAssembly : La révolution des performances web</h3>
+                            <p class="blog-card-desc">Comment Wasm repousse les limites des navigateurs en permettant d'exécuter du code à la vitesse native pour des applications ultra-rapides et complexes.</p>
+                            <a href="article_webassembly.html" class="blog-card-link">
+                                Lire l'article
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- // ai in workplace article -->
+                    <article class="blog-card" data-category="ai">
+                        <div class="blog-card-img">
+                            <img src="Images/azerty-ia.png" alt="IA et productivité">
+                            <div class="blog-card-tag ai-tag">IA</div>
+                        </div>
+                        <div class="blog-card-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">28 Mar 2026</span>
+                                <span class="blog-dot">•</span>
+                                <span class="blog-author">Par Amine</span>
+                            </div>
+                            <h3 class="blog-card-title">L'IA générative : Le nouveau binôme du développeur</h3>
+                            <p class="blog-card-desc">Au-delà du buzz, découvrez comment l'intelligence artificielle redéfinit notre quotidien en agence et booste la productivité de nos équipes techniques.</p>
+                            <a href="article_ia.html" class="blog-card-link">
+                                Lire l'article
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- // general / neutral article -->
+                    <article class="blog-card" data-category="general">
+                        <div class="blog-card-img">
+                            <img src="Images/mybrickstore-ordi.png" alt="Accessibilité web">
+                            <div class="blog-card-tag general-tag">Général</div>
+                        </div>
+                        <div class="blog-card-content">
+                            <div class="blog-meta">
+                                <span class="blog-date">15 Mar 2026</span>
+                                <span class="blog-dot">•</span>
+                                <span class="blog-author">Par Rayan</span>
+                            </div>
+                            <h3 class="blog-card-title">L'accessibilité numérique : Un standard, pas une option</h3>
+                            <p class="blog-card-desc">Pourquoi concevoir des interfaces web accessibles à tous est devenu une priorité absolue et comment l'intégrer efficacement dès le début de vos projets.</p>
+                            <a href="#" class="blog-card-link">
+                                Lire l'article
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- // footer section -->
+    <footer class="site-footer">
+        <div class="footer-decor">
+            <span class="footer-huge-logo font-mono">&lt;A/&gt;</span>
+        </div>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo font-mono">&lt;AZER TY/&gt;</div>
+                    <div class="footer-contact">
+                        <p class="font-mono">+33 1 02 03 04 05</p>
+                        <p class="font-mono">contact@azerty-solutions.fr</p>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#"><i class="fa-solid fa-earth-europe"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-addresses">
+                    <h3 class="footer-heading">Nos Adresses</h3>
+                    <div class="footer-address-block">
+                        <h4>Marne-la-Vallée (HQ)</h4>
+                        <p>IUT de Marne-la-Vallée<br>2 Rue Albert Einstein<br>77420 Champs-sur-Marne</p>
+                    </div>
+                    <div class="footer-address-block">
+                        <h4>Paris</h4>
+                        <p>10 Allée Lydia Becker<br>75018 Paris - FRANCE</p>
+                    </div>
+                    <div class="footer-address-block">
+                        <h4>Lyon</h4>
+                        <p>Immeuble LE PRESIDENT<br>40/42 Av. Georges Pompidou<br>69003 Lyon - FRANCE</p>
+                    </div>
+                </div>
+                <div class="footer-nav">
+                    <h3 class="footer-heading">Nous Découvrir</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about.html">Qui sommes-nous</a></li>
+                        <li><a href="technologies.html">Technologies</a></li>
+                        <li><a href="realisations.html">Réalisations</a></li>
+                        <li><a href="recrutement.html">Recrutement</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="collaborons.html">Collaborons</a></li>
+                        <li><a href="mentions.html">Mentions légales</a></li>
+                        <li><a href="glossaire.html">Glossaire</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom font-mono">
+                <p>&copy; 2026 AZER TY SAS. All systems operational.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

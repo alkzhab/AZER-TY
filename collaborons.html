@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZER TY - Collaborons</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;600;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/collaborons.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+
+    <script src="JS/header.js" defer></script>
+    <script src="JS/particules.js" defer></script>
+    <script src="JS/scroll.js" defer></script>
+    <script src="JS/tilt.js" defer></script>
+</head>
+
+<body>
+    <header id="site-header">
+        <div class="header-inner">
+
+            <a href="index.html" class="logo">
+                <img src="Images/logo.png" alt="AZER TY — Web Solutions">
+            </a>
+
+            <nav>
+            <ul class="nav-list">
+                <li><a href="about.html">Qui sommes-nous</a></li>
+                <li><a href="technologies.html">Technologies</a></li>
+                <li><a href="realisations.html">Réalisations</a></li>
+                <li><a href="recrutement.html">Recrutement</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="glossaire.html">Glossaire</a></li>
+            </ul>
+            </nav>
+
+            <div class="nav-cta">
+            <a href="collaborons.html" class="btn-contact">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+                Contactez-nous
+            </a>
+            </div>
+
+            <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+            </button>
+
+        </div>
+
+        <div class="mobile-menu" id="mobile-menu" role="navigation">
+            <a href="about.html">Qui sommes-nous</a>
+            <a href="technologies.html">Technologies</a>
+            <a href="realisations.html">Réalisations</a>
+            <a href="recrutement.html">Recrutement</a>
+            <a href="blog.html">Blog</a>
+            <a href="glossaire.html">Glossaire</a>
+            <div class="mobile-cta"><a href="collaborons.html">Contactez-nous</a></div>
+        </div>
+    </header>
+
+    <div id="particles-js"></div>
+    <div class="bg-grid"></div>
+
+    <section id="main-contact" class="pt-section">
+        <div class="container grid-2">
+            <div class="reveal">
+                <h2 class="title-medium" style="margin-bottom: 1rem;">Discutons de votre projet</h2>
+                <p style="margin-bottom: 3rem;">Plus de 100 entreprises nous ont fait confiance pour lancer leurs produits web, mobiles et logiciel. Devenez la prochaine !</p>
+                
+                <div class="client-logos-grid">
+                    <span class="logo-placeholder"><i class="fa-brands fa-aws"></i> AWS Partner</span>
+                    <span class="logo-placeholder"><i class="fa-brands fa-google"></i> Google Cloud</span>
+                    <span class="logo-placeholder"><i class="fa-brands fa-microsoft"></i> Microsoft</span>
+                    <span class="logo-placeholder"><i class="fa-brands fa-stripe"></i> Stripe</span>
+                    <span class="logo-placeholder"><i class="fa-brands fa-github"></i> GitHub</span>
+                    <span class="logo-placeholder"><i class="fa-brands fa-docker"></i> Docker</span>
+                </div>
+            </div>
+            
+            <div class="reveal delay-100">
+                <form class="card contact-form" onsubmit="event.preventDefault();">
+                    <div class="form-gradient-bar"></div>
+                    
+                    <div class="grid-2" style="gap: 1rem;">
+                        <div class="form-group">
+                            <label class="form-label font-mono">Votre nom et prénom</label>
+                            <input type="text" class="form-input" placeholder="Jean Dupont">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label font-mono">Votre adresse e-mail</label>
+                            <input type="email" class="form-input" placeholder="jean@entreprise.com">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label font-mono">Votre numéro de téléphone</label>
+                        <input type="tel" class="form-input" placeholder="+33 6 12 34 56 78">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label font-mono">Quel type de projet vous intéresse ?</label>
+                        <div class="project-types-flex">
+                            <label class="project-type-btn">
+                                <input type="checkbox" name="type" value="web">
+                                <span>Plateforme web</span>
+                            </label>
+                            <label class="project-type-btn">
+                                <input type="checkbox" name="type" value="mobile">
+                                <span>Application mobile</span>
+                            </label>
+                            <label class="project-type-btn">
+                                <input type="checkbox" name="type" value="logiciel">
+                                <span>Logiciel métier</span>
+                            </label>
+                            <label class="project-type-btn">
+                                <input type="checkbox" name="type" value="ecommerce">
+                                <span>E-commerce/Marketplace</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label font-mono">Décrivez-nous votre besoin</label>
+                        <textarea class="form-input" placeholder="Dites-nous en plus sur vos objectifs..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label font-mono">Avez-vous un document à partager ?</label>
+                        <div class="file-upload-wrapper">
+                            <label class="file-upload-btn">
+                                Choisir un fichier
+                                <input type="file" class="file-upload-input">
+                            </label>
+                            <span class="file-upload-text">Aucun fichier choisi</span>
+                        </div>
+                        <p class="form-guarantee" style="margin-top: 0.5rem; font-size: 0.7rem;">Limite de taille : 10 Mo</p>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary form-submit-btn">ENVOYER LA DEMANDE</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-info" class="py-small">
+        <div class="container grid-3">
+            <div class="card reveal delay-100">
+                <div class="icon-box" style="color: var(--blue); background: rgba(0, 160, 210, 0.1); margin-left: 0;">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                </div>
+                <h3 class="font-mono mb-1" style="color: var(--blue); font-size: 1.2rem;">Adresse</h3>
+                <p style="font-size: 0.9rem;">128 rue de la Boétie<br>75008 Paris</p>
+            </div>
+            
+            <div class="card reveal delay-200">
+                <div class="icon-box" style="color: var(--yellow); background: rgba(255, 194, 14, 0.1); margin-left: 0;">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+                <h3 class="font-mono mb-1" style="color: var(--yellow); font-size: 1.2rem;">Téléphone</h3>
+                <p style="font-size: 0.9rem;">+33 (0)9 70 17 51 50</p>
+            </div>
+            
+            <div class="card reveal delay-300">
+                <div class="icon-box" style="color: var(--green); background: rgba(57, 181, 74, 0.1); margin-left: 0;">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <h3 class="font-mono mb-1" style="color: var(--green); font-size: 1.2rem;">Email</h3>
+                <p style="font-size: 0.9rem;">contact@azerty-solutions.fr</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="hero-contact" class="pb-section">
+        <div class="container grid-2 align-center">
+            <div class="hero-text-content reveal">
+                <h1 class="title-large" style="margin-bottom: 1rem;">Votre succès digital commence ici.</h1>
+                <h2 class="title-small text-gradient" style="margin-bottom: 1.5rem;">Nous concevons des solutions web, mobile & logiciel sur-mesure.</h2>
+                <p>Pour une première analyse personnalisée et discuter de vos objectifs, prenez quelques minutes pour nous décrire votre projet. Nous reviendrons vers vous rapidement !</p>
+            </div>
+            <div class="hero-image-content reveal delay-100">
+                <div style="border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <img src="Images/azerty2.png" alt="[Image de l'équipe au travail]" style="width: 100%; height: auto; display: block;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-decor">
+            <span class="footer-huge-logo font-mono">&lt;A/&gt;</span>
+        </div>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo font-mono">&lt;AZER TY/&gt;</div>
+                    <div class="footer-contact">
+                        <p class="font-mono">+33 1 02 03 04 05</p>
+                        <p class="font-mono">contact@azerty-solutions.fr</p>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#"><i class="fa-solid fa-earth-europe"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-addresses">
+                    <h3 class="footer-heading">Nos Adresses</h3>
+                    <div class="footer-address-block">
+                        <h4>Marne-la-Vallée (HQ)</h4>
+                        <p>IUT de Marne-la-Vallée<br>2 Rue Albert Einstein<br>77420 Champs-sur-Marne</p>
+                    </div>
+                    <div class="footer-address-block">
+                        <h4>Paris</h4>
+                        <p>10 Allée Lydia Becker<br>75018 Paris - FRANCE</p>
+                    </div>
+                    <div class="footer-address-block">
+                        <h4>Lyon</h4>
+                        <p>Immeuble LE PRESIDENT<br>40/42 Av. Georges Pompidou<br>69003 Lyon - FRANCE</p>
+                    </div>
+                </div>
+
+                <div class="footer-nav">
+                    <h3 class="footer-heading">Nous Découvrir</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about.html">Qui sommes nous</a></li>
+                        <li><a href="technologies.html">Technologies</a></li>
+                        <li><a href="realisations.html">Réalisations</a></li>
+                        <li><a href="recrutement.html">Recrutement</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="collaborons.html">Collaborons</a></li>
+                        <li><a href="mentions.html">Mentions légales</a></li>
+                        <li><a href="glossaire.html">Glossaire</a></li> 
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom font-mono">
+                <p>&copy; 2026 AZER TY SAS. All systems operational.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZER TY - Recrutement</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;600;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/recrutement.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script src="JS/header.js" defer></script>
+    <script src="JS/particules.js"></script>
+    <script src="JS/scroll.js"></script>
+    <script src="JS/tilt.js"></script>
+</head>
+
+<body>
+
+    <header id="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <img src="Images/logo.png" alt="AZER TY — Web Solutions">
+            </a>
+
+            <nav>
+            <ul class="nav-list">
+                <li><a href="about.html">Qui sommes-nous</a></li>
+                <li><a href="technologies.html">Technologies</a></li>
+                <li><a href="realisations.html">Réalisations</a></li>
+                <li><a href="recrutement.html" class="active">Recrutement</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="glossaire.html">Glossaire</a></li>
+            </ul>
+            </nav>
+
+            <div class="nav-cta">
+            <a href="collaborons.html" class="btn-contact">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+                Contactez-nous
+            </a>
+            </div>
+
+            <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+            </button>
+
+        </div>
+
+        <div class="mobile-menu" id="mobile-menu" role="navigation">
+            <a href="about.html">Qui sommes-nous</a>
+            <a href="technologies.html">Technologies</a>
+            <a href="realisations.html">Réalisations</a>
+            <a href="recrutement.html">Recrutement</a>
+            <a href="blog.html">Blog</a>
+            <a href="glossaire.html">Glossaire</a>
+            <div class="mobile-cta"><a href="collaborons.html">Contactez-nous</a></div>
+        </div>
+    </header>
+    
+    <div id="particles-js"></div>
+    <div class="bg-grid"></div>
+
+    <main class="recrutement-page-wrapper">
+
+        <section class="recrutement-section reveal">
+            <div class="container">
+                <div class="grid-2 align-center hero-reverse-mobile">
+                    <div class="text-col">
+                        <div class="tag font-mono"><span class="pulse-dot"></span>On recrute</div>
+                        <h1 class="title-medium" style="margin-bottom: 2rem;">
+                            Chez nous, vous<br>
+                            <span class="text-gradient">travaillez</span> pour vous
+                        </h1>
+                        <p class="section-text">Nous voulons prouver qu'impliquer chaque collaborateur·rice dans la gouvernance d'une société contribue à sa croissance et sa réussite. Tout comme notre projet social, notre méthodologie de travail est fondée sur <span class="text-bold">la confiance et l'autogestion.</span></p>
+                        <p class="section-text">Nous sommes une équipe qui partage tout : du code, de l'expertise, des succès et aussi des échecs, l'important étant de le faire en toute transparence.</p>
+                    </div>
+                    <div class="image-col">
+                        <div class="img-decor-wrapper tilt-card">
+                            <div class="img-decor-bg-blue"></div>
+                            <img src="Images/azerty.png" alt="Développeur au travail" class="rounded-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="recrutement-section reveal delay-100">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="title-medium">Notre process de <span class="text-gradient">recrutement</span></h2>
+                </div>
+
+                <div class="process-grid">
+                    <div class="card tilt-card process-card">
+                        <span class="step-number text-gradient font-mono">01</span>
+                        <h3 class="title-small">Envoi de votre candidature</h3>
+                        <p>Envoyez-nous une candidature où nous pouvons avoir un état des lieux de votre parcours, vos projets et vos envies professionnelles.</p>
+                    </div>
+                    
+                    <div class="card tilt-card process-card">
+                        <span class="step-number text-gradient font-mono">02</span>
+                        <h3 class="title-small">Étude de votre candidature</h3>
+                        <p>Un peu de patience : nous répondons à chaque candidature sous un délai maximum de 30 jours !</p>
+                    </div>
+
+                    <div class="card tilt-card process-card">
+                        <span class="step-number text-gradient font-mono">03</span>
+                        <h3 class="title-small">Envoi d'un test</h3>
+                        <p>Vous postulez à un poste technique ? Nous vous transmettons un test en ligne sur vos connaissances. Celui-ci permet d'orienter les sujets de l'entretien.</p>
+                    </div>
+
+                    <div class="card tilt-card process-card">
+                        <span class="step-number text-gradient font-mono">04</span>
+                        <h3 class="title-small">Entretien</h3>
+                        <p>Le moment où nous nous rencontrons. Réalisé en duo, nous évoquons votre parcours, vous présentons en détail notre vision et notre grille de salaires.</p>
+                    </div>
+
+                    <div class="card tilt-card process-card">
+                        <span class="step-number text-gradient font-mono">05</span>
+                        <h3 class="title-small">Validation de l'équipe</h3>
+                        <p>Suite à cet entretien, nos collaborateurs rédigent un compte rendu et nous procédons à une validation collective de la candidature.</p>
+                    </div>
+
+                    <div class="card tilt-card process-card">
+                        <span class="step-number text-gradient font-mono">06</span>
+                        <h3 class="title-small">Étape finale</h3>
+                        <p>Peu importe le résultat, nous vous tenons informé·e et, si tous les voyants sont au vert, nous préparons ensemble votre future arrivée !</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="recrutement-section reveal delay-100">
+            <div class="container">
+                <div class="grid-2 align-center">
+                    <div class="image-col">
+                        <div class="img-decor-wrapper tilt-card">
+                            <div class="img-decor-bg-green"></div>
+                            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80" alt="Setup de travail" class="rounded-img">
+                        </div>
+                    </div>
+                    <div class="text-col">
+                        <h2 class="title-medium">Avantages</h2>
+                        <ul class="advantages-list">
+                            <li><i class="fa-solid fa-arrow-right"></i> Participation égalitaire aux bénéfices</li>
+                            <li><i class="fa-solid fa-arrow-right"></i> CDI de 35 heures par semaine</li>
+                            <li><i class="fa-solid fa-arrow-right"></i> Télétravail intégral ou hybride</li>
+                            <li><i class="fa-solid fa-arrow-right"></i> Transparence des salaires</li>
+                            <li><i class="fa-solid fa-arrow-right"></i> Aménagement flexible du temps de travail</li>
+                            <li><i class="fa-solid fa-arrow-right"></i> Mutuelle prise en charge à 100%</li>
+                            <li><i class="fa-solid fa-arrow-right"></i> Libre choix du matériel (Mac ou PC)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="recrutement-section reveal delay-100">
+            <div class="container">
+                <div class="grid-2 align-center hero-reverse-mobile">
+                    <div class="text-col">
+                        <h2 class="title-medium">Découvrez nos opportunités</h2>
+                        <p class="section-text">Depuis nos débuts, AZER TY expérimente par son projet social, et les valeurs fortes qu'elle véhicule, mais aussi sur le plan technique où elle innove sans cesse pour répondre aux besoins ambitieux de ses clients. Envie de participer à l'aventure ?</p>
+                        
+                        <h3 class="title-small" style="margin-top: 2rem; color: var(--blue);">Nous recherchons</h3>
+                        <ul class="jobs-list">
+                            <li><a href="#"><i class="fa-solid fa-arrow-right"></i> Lead développeur·se Fullstack (CDI)</a></li>
+                            <li><a href="#"><i class="fa-solid fa-arrow-right"></i> Développeur·se React/Node Senior (CDI)</a></li>
+                            <li><a href="#"><i class="fa-solid fa-arrow-right"></i> Architecte Cloud & DevOps (CDI)</a></li>
+                            <li><a href="#"><i class="fa-solid fa-arrow-right" style="color: var(--green);"></i> Candidature spontanée ? Cliquez ici</a></li>
+                        </ul>
+                    </div>
+                    <div class="image-col">
+                        <div class="img-decor-wrapper tilt-card">
+                            <div class="img-decor-bg-blue"></div>
+                            <img src="Images/azerty4.jpg" alt="Notre équipe" class="rounded-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="recrutement-section reveal delay-200" style="padding-bottom: 120px;">
+            <div class="container">
+                <div class="contact-box card">
+                    <div class="form-gradient-bar"></div>
+                    <div class="grid-2 align-start">
+                        <div class="contact-info-col">
+                            <div class="tag font-mono">CONTACTEZ-NOUS</div>
+                            <h2 class="title-medium">Une question ? Un projet</h2>
+                            
+                            <div class="contact-detail">
+                                <h4 class="font-mono">Téléphone</h4>
+                                <p>+33 1 02 03 04 05</p>
+                            </div>
+                            
+                            <div class="contact-detail">
+                                <h4 class="font-mono">Email</h4>
+                                <p>recrutement@azerty-solutions.fr</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-form-col">
+                            <form onsubmit="event.preventDefault();">
+                                <div class="form-group">
+                                    <input type="text" class="form-input" placeholder="Nom complet" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-input" placeholder="Email" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-input" placeholder="Votre message ou lien vers votre profil/portfolio..." required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                    <i class="fa-solid fa-paper-plane" style="margin-right: 8px;"></i> Envoyer le message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-decor">
+            <span class="footer-huge-logo font-mono">&lt;A/&gt;</span>
+        </div>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo font-mono">&lt;AZER TY/&gt;</div>
+                    <div class="footer-contact">
+                        <p class="font-mono">+33 1 02 03 04 05</p>
+                        <p class="font-mono">contact@azerty-solutions.fr</p>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#"><i class="fa-solid fa-earth-europe"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-addresses">
+                    <h3 class="footer-heading">Nos Adresses</h3>
+                    
+                    <div class="footer-address-block">
+                        <h4>Marne-la-Vallée (HQ)</h4>
+                        <p>IUT de Marne-la-Vallée<br>2 Rue Albert Einstein<br>77420 Champs-sur-Marne</p>
+                    </div>
+
+                    <div class="footer-address-block">
+                        <h4>Paris</h4>
+                        <p>10 Allée Lydia Becker<br>75018 Paris - FRANCE</p>
+                    </div>
+
+                    <div class="footer-address-block">
+                        <h4>Lyon</h4>
+                        <p>Immeuble LE PRESIDENT<br>40/42 Av. Georges Pompidou<br>69003 Lyon - FRANCE</p>
+                    </div>
+                </div>
+
+                <div class="footer-nav">
+                    <h3 class="footer-heading">Nous Découvrir</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about.html">Qui sommes nous</a></li>
+                        <li><a href="technologies.html">Technologies</a></li>
+                        <li><a href="realisations.html">Réalisations</a></li>
+                        <li><a href="recrutement.html">Recrutement</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="collaborons.html">Collaborons</a></li>
+                        <li><a href="mentions.html">Mentions légales</a></li>
+                        <li><a href="glossaire.html">Glossaire</a></li> 
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom font-mono">
+                <p>&copy; 2026 AZER TY SAS. All systems operational.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

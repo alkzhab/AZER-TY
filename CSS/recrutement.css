@@ -1,0 +1,222 @@
+.recrutement-page-wrapper {
+    padding-top: calc(var(--nav-height) + 40px);
+}
+
+.recrutement-section {
+    padding: 60px 0;
+    min-height: auto;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.section-text {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+}
+
+.text-bold {
+    font-weight: 600;
+    color: var(--heading);
+}
+
+.image-col {
+    position: relative;
+    padding: 20px;
+}
+
+.img-decor-wrapper {
+    position: relative;
+    z-index: 1;
+    border-radius: 1rem;
+}
+
+.rounded-img {
+    width: 100%;
+    border-radius: 1rem;
+    display: block;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 2;
+}
+
+.img-decor-bg-blue,
+.img-decor-bg-green {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    border-radius: 1rem;
+    z-index: 0;
+    opacity: 0.15;
+}
+
+.img-decor-bg-blue {
+    top: -20px;
+    right: -20px;
+    background: var(--blue);
+}
+
+.img-decor-bg-green {
+    bottom: -20px;
+    left: -20px;
+    background: var(--green);
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.process-card {
+    padding: 2.5rem 2rem;
+    background: var(--card);
+}
+
+.process-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.step-number {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 1rem;
+    display: inline-block;
+    opacity: 0.9;
+}
+
+.advantages-list {
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.advantages-list li {
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.125rem;
+    color: var(--heading);
+}
+
+.advantages-list i {
+    color: var(--blue);
+    font-size: 1.25rem;
+    background: rgba(0, 160, 210, 0.1);
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.jobs-list {
+    list-style: none;
+    margin-top: 1.5rem;
+}
+
+.jobs-list li {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed var(--border);
+}
+
+.jobs-list li:last-child {
+    border-bottom: none;
+}
+
+.jobs-list a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--heading);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.125rem;
+    transition: color 0.3s;
+}
+
+.jobs-list a i {
+    color: var(--blue);
+    transition: transform 0.3s ease;
+}
+
+.jobs-list a:hover {
+    color: var(--blue);
+}
+
+.jobs-list a:hover i {
+    transform: translateX(5px);
+}
+
+.contact-box {
+    position: relative;
+    overflow: hidden;
+    padding: 4rem;
+}
+
+.form-gradient-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(to right, var(--green), var(--blue));
+}
+
+.contact-detail {
+    margin-top: 2rem;
+}
+
+.contact-detail h4 {
+    color: var(--blue);
+    margin-bottom: 0.25rem;
+    font-size: 0.875rem;
+}
+
+.contact-detail p {
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+.contact-form-col {
+    background: rgba(241, 245, 249, 0.5);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border);
+}
+
+@media (max-width: 992px) {
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contact-box {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-reverse-mobile .text-col {
+        order: 2;
+    }
+    
+    .hero-reverse-mobile .image-col {
+        order: 1;
+        margin-bottom: 2rem;
+    }
+
+    .contact-form-col {
+        padding: 1.5rem;
+        margin-top: 2rem;
+    }
+}
